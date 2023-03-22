@@ -1,2 +1,2 @@
 # nuzlocke-solver
-Calculator for Optimizing Hardcore Nuzlockes
+Calculator for Optimizing Hardcore Pokemon Nuzlockes
