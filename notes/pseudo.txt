@@ -1,0 +1,26 @@
+// possible_pokemon calculator
+let current_pokemon = <load all current pokemon, including dead ones>;
+let missed_encounters = <load list of failed encounters>;
+let used_encounters = current_pokemon.map(pokemon => pokemon.location).concat(missed_encounters);
+
+let all_encounters = <load list of possible encounters> (each with a location, type, and trainer_id they're available after. Also with list of pokemon { name, encounter_chance, min_level, max_level })
+let last_trainer_id = <load last trainer fought>; // can check available encounters based on game position
+let possible_encounters = all_encounters
+    .filter(encounter => encounter.trainer_id <= last_trainer_id && !used_encounters.includes(encounter.location))
+    
+let possible_pokemon = current_set.concat();
+encounters.forEach(encounter => {
+    encounter.pokemon.forEach(pokemon => {
+        if (possible_pokemon.includes(cur => cur.name === pokemon.name)) {
+            return;
+        }
+        possible_pokemon.push(pokemon);
+    });
+});
+
+
+// probability calculator
+let possible_pokemon = <all possible available pokemon for battle>
+let current_items = <load all current items from inventory>
+let used_items = <load list of items already consumed>
+

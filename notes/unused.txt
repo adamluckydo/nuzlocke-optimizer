@@ -1,0 +1,23 @@
+// Given current pokemon & available encounters, get all combinations of pokemon available
+function get_all_unique_sets(current_set, possible_encounters) {
+    let encounter = possible_encounters[0];
+    // Base case -- no more encounters
+    if (!encounter) {
+        return current_set;
+    }
+    if (current_set.includes(cur => cur.location === encounter.location)) {
+        return;
+    }
+    encounter.pokemon.forEach(pokemon => {
+        if (current_set.includes(cur => cur.name === pokemon.name)) {
+            return;
+        }
+        let new_set = current_set.concat(pokemon);
+        let new_possible_encounters = possible_encounters.slice(1);
+        return get_all_unique_sets(new_set, new_possible_encounters);
+    })
+    // Also get unique sets when skipping the encounter
+    let new_set = current_set.concat();
+    let new_possible_encounters = possible_encounters.slice(1));
+    return get_all_unique_sets(new_set, new_possible_encounters);
+}

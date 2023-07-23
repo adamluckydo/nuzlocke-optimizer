@@ -1,0 +1,1266 @@
+{
+    "BULBASAUR": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "IVYSAUR"
+        }
+    ],
+    "IVYSAUR": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "VENUSAUR"
+        }
+    ],
+    "CHARMANDER": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "CHARMELEON"
+        }
+    ],
+    "CHARMELEON": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "CHARIZARD"
+        }
+    ],
+    "SQUIRTLE": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "WARTORTLE"
+        }
+    ],
+    "WARTORTLE": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "BLASTOISE"
+        }
+    ],
+    "CATERPIE": [
+        {
+            "method": "LEVEL",
+            "requirement": "7",
+            "evolution": "METAPOD"
+        }
+    ],
+    "METAPOD": [
+        {
+            "method": "LEVEL",
+            "requirement": "10",
+            "evolution": "BUTTERFREE"
+        }
+    ],
+    "WEEDLE": [
+        {
+            "method": "LEVEL",
+            "requirement": "7",
+            "evolution": "KAKUNA"
+        }
+    ],
+    "KAKUNA": [
+        {
+            "method": "LEVEL",
+            "requirement": "10",
+            "evolution": "BEEDRILL"
+        }
+    ],
+    "PIDGEY": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "PIDGEOTTO"
+        }
+    ],
+    "PIDGEOTTO": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "PIDGEOT"
+        }
+    ],
+    "RATTATA": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "RATICATE"
+        }
+    ],
+    "SPEAROW": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "FEAROW"
+        }
+    ],
+    "EKANS": [
+        {
+            "method": "LEVEL",
+            "requirement": "22",
+            "evolution": "ARBOK"
+        }
+    ],
+    "PIKACHU": [
+        {
+            "method": "ITEM",
+            "requirement": "THUNDER_STONE",
+            "evolution": "RAICHU"
+        }
+    ],
+    "SANDSHREW": [
+        {
+            "method": "LEVEL",
+            "requirement": "22",
+            "evolution": "SANDSLASH"
+        }
+    ],
+    "NIDORAN_F": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "NIDORINA"
+        }
+    ],
+    "NIDORINA": [
+        {
+            "method": "ITEM",
+            "requirement": "MOON_STONE",
+            "evolution": "NIDOQUEEN"
+        }
+    ],
+    "NIDORAN_M": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "NIDORINO"
+        }
+    ],
+    "NIDORINO": [
+        {
+            "method": "ITEM",
+            "requirement": "MOON_STONE",
+            "evolution": "NIDOKING"
+        }
+    ],
+    "CLEFAIRY": [
+        {
+            "method": "ITEM",
+            "requirement": "MOON_STONE",
+            "evolution": "CLEFABLE"
+        }
+    ],
+    "VULPIX": [
+        {
+            "method": "ITEM",
+            "requirement": "FIRE_STONE",
+            "evolution": "NINETALES"
+        }
+    ],
+    "JIGGLYPUFF": [
+        {
+            "method": "ITEM",
+            "requirement": "MOON_STONE",
+            "evolution": "WIGGLYTUFF"
+        }
+    ],
+    "ZUBAT": [
+        {
+            "method": "LEVEL",
+            "requirement": "22",
+            "evolution": "GOLBAT"
+        }
+    ],
+    "GOLBAT": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "CROBAT"
+        }
+    ],
+    "ODDISH": [
+        {
+            "method": "LEVEL",
+            "requirement": "21",
+            "evolution": "GLOOM"
+        }
+    ],
+    "GLOOM": [
+        {
+            "method": "ITEM",
+            "requirement": "LEAF_STONE",
+            "evolution": "VILEPLUME"
+        },
+        {
+            "method": "ITEM",
+            "requirement": "SUN_STONE",
+            "evolution": "BELLOSSOM"
+        }
+    ],
+    "PARAS": [
+        {
+            "method": "LEVEL",
+            "requirement": "24",
+            "evolution": "PARASECT"
+        }
+    ],
+    "VENONAT": [
+        {
+            "method": "LEVEL",
+            "requirement": "31",
+            "evolution": "VENOMOTH"
+        }
+    ],
+    "DIGLETT": [
+        {
+            "method": "LEVEL",
+            "requirement": "26",
+            "evolution": "DUGTRIO"
+        }
+    ],
+    "MEOWTH": [
+        {
+            "method": "LEVEL",
+            "requirement": "28",
+            "evolution": "PERSIAN"
+        }
+    ],
+    "PSYDUCK": [
+        {
+            "method": "LEVEL",
+            "requirement": "33",
+            "evolution": "GOLDUCK"
+        }
+    ],
+    "MANKEY": [
+        {
+            "method": "LEVEL",
+            "requirement": "28",
+            "evolution": "PRIMEAPE"
+        }
+    ],
+    "GROWLITHE": [
+        {
+            "method": "ITEM",
+            "requirement": "FIRE_STONE",
+            "evolution": "ARCANINE"
+        }
+    ],
+    "POLIWAG": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "POLIWHIRL"
+        }
+    ],
+    "POLIWHIRL": [
+        {
+            "method": "ITEM",
+            "requirement": "WATER_STONE",
+            "evolution": "POLIWRATH"
+        },
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "KINGS_ROCK",
+            "evolution": "POLITOED"
+        }
+    ],
+    "ABRA": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "KADABRA"
+        }
+    ],
+    "KADABRA": [
+        {
+            "method": "TRADE",
+            "requirement": "0",
+            "evolution": "ALAKAZAM"
+        }
+    ],
+    "MACHOP": [
+        {
+            "method": "LEVEL",
+            "requirement": "28",
+            "evolution": "MACHOKE"
+        }
+    ],
+    "MACHOKE": [
+        {
+            "method": "TRADE",
+            "requirement": "0",
+            "evolution": "MACHAMP"
+        }
+    ],
+    "BELLSPROUT": [
+        {
+            "method": "LEVEL",
+            "requirement": "21",
+            "evolution": "WEEPINBELL"
+        }
+    ],
+    "WEEPINBELL": [
+        {
+            "method": "ITEM",
+            "requirement": "LEAF_STONE",
+            "evolution": "VICTREEBEL"
+        }
+    ],
+    "TENTACOOL": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "TENTACRUEL"
+        }
+    ],
+    "GEODUDE": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "GRAVELER"
+        }
+    ],
+    "GRAVELER": [
+        {
+            "method": "TRADE",
+            "requirement": "0",
+            "evolution": "GOLEM"
+        }
+    ],
+    "PONYTA": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "RAPIDASH"
+        }
+    ],
+    "SLOWPOKE": [
+        {
+            "method": "LEVEL",
+            "requirement": "37",
+            "evolution": "SLOWBRO"
+        },
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "KINGS_ROCK",
+            "evolution": "SLOWKING"
+        }
+    ],
+    "MAGNEMITE": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "MAGNETON"
+        }
+    ],
+    "DODUO": [
+        {
+            "method": "LEVEL",
+            "requirement": "31",
+            "evolution": "DODRIO"
+        }
+    ],
+    "SEEL": [
+        {
+            "method": "LEVEL",
+            "requirement": "34",
+            "evolution": "DEWGONG"
+        }
+    ],
+    "GRIMER": [
+        {
+            "method": "LEVEL",
+            "requirement": "38",
+            "evolution": "MUK"
+        }
+    ],
+    "SHELLDER": [
+        {
+            "method": "ITEM",
+            "requirement": "WATER_STONE",
+            "evolution": "CLOYSTER"
+        }
+    ],
+    "GASTLY": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "HAUNTER"
+        }
+    ],
+    "HAUNTER": [
+        {
+            "method": "TRADE",
+            "requirement": "0",
+            "evolution": "GENGAR"
+        }
+    ],
+    "ONIX": [
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "METAL_COAT",
+            "evolution": "STEELIX"
+        }
+    ],
+    "DROWZEE": [
+        {
+            "method": "LEVEL",
+            "requirement": "26",
+            "evolution": "HYPNO"
+        }
+    ],
+    "KRABBY": [
+        {
+            "method": "LEVEL",
+            "requirement": "28",
+            "evolution": "KINGLER"
+        }
+    ],
+    "VOLTORB": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "ELECTRODE"
+        }
+    ],
+    "EXEGGCUTE": [
+        {
+            "method": "ITEM",
+            "requirement": "LEAF_STONE",
+            "evolution": "EXEGGUTOR"
+        }
+    ],
+    "CUBONE": [
+        {
+            "method": "LEVEL",
+            "requirement": "28",
+            "evolution": "MAROWAK"
+        }
+    ],
+    "KOFFING": [
+        {
+            "method": "LEVEL",
+            "requirement": "35",
+            "evolution": "WEEZING"
+        }
+    ],
+    "RHYHORN": [
+        {
+            "method": "LEVEL",
+            "requirement": "42",
+            "evolution": "RHYDON"
+        }
+    ],
+    "CHANSEY": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "BLISSEY"
+        }
+    ],
+    "HORSEA": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "SEADRA"
+        }
+    ],
+    "SEADRA": [
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "DRAGON_SCALE",
+            "evolution": "KINGDRA"
+        }
+    ],
+    "GOLDEEN": [
+        {
+            "method": "LEVEL",
+            "requirement": "33",
+            "evolution": "SEAKING"
+        }
+    ],
+    "STARYU": [
+        {
+            "method": "ITEM",
+            "requirement": "WATER_STONE",
+            "evolution": "STARMIE"
+        }
+    ],
+    "SCYTHER": [
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "METAL_COAT",
+            "evolution": "SCIZOR"
+        }
+    ],
+    "MAGIKARP": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "GYARADOS"
+        }
+    ],
+    "EEVEE": [
+        {
+            "method": "ITEM",
+            "requirement": "THUNDER_STONE",
+            "evolution": "JOLTEON"
+        },
+        {
+            "method": "ITEM",
+            "requirement": "WATER_STONE",
+            "evolution": "VAPOREON"
+        },
+        {
+            "method": "ITEM",
+            "requirement": "FIRE_STONE",
+            "evolution": "FLAREON"
+        },
+        {
+            "method": "FRIENDSHIP_DAY",
+            "requirement": "0",
+            "evolution": "ESPEON"
+        },
+        {
+            "method": "FRIENDSHIP_NIGHT",
+            "requirement": "0",
+            "evolution": "UMBREON"
+        }
+    ],
+    "PORYGON": [
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "UP_GRADE",
+            "evolution": "PORYGON2"
+        }
+    ],
+    "OMANYTE": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "OMASTAR"
+        }
+    ],
+    "KABUTO": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "KABUTOPS"
+        }
+    ],
+    "DRATINI": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "DRAGONAIR"
+        }
+    ],
+    "DRAGONAIR": [
+        {
+            "method": "LEVEL",
+            "requirement": "55",
+            "evolution": "DRAGONITE"
+        }
+    ],
+    "CHIKORITA": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "BAYLEEF"
+        }
+    ],
+    "BAYLEEF": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "MEGANIUM"
+        }
+    ],
+    "CYNDAQUIL": [
+        {
+            "method": "LEVEL",
+            "requirement": "14",
+            "evolution": "QUILAVA"
+        }
+    ],
+    "QUILAVA": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "TYPHLOSION"
+        }
+    ],
+    "TOTODILE": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "CROCONAW"
+        }
+    ],
+    "CROCONAW": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "FERALIGATR"
+        }
+    ],
+    "SENTRET": [
+        {
+            "method": "LEVEL",
+            "requirement": "15",
+            "evolution": "FURRET"
+        }
+    ],
+    "HOOTHOOT": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "NOCTOWL"
+        }
+    ],
+    "LEDYBA": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "LEDIAN"
+        }
+    ],
+    "SPINARAK": [
+        {
+            "method": "LEVEL",
+            "requirement": "22",
+            "evolution": "ARIADOS"
+        }
+    ],
+    "CHINCHOU": [
+        {
+            "method": "LEVEL",
+            "requirement": "27",
+            "evolution": "LANTURN"
+        }
+    ],
+    "PICHU": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "PIKACHU"
+        }
+    ],
+    "CLEFFA": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "CLEFAIRY"
+        }
+    ],
+    "IGGLYBUFF": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "JIGGLYPUFF"
+        }
+    ],
+    "TOGEPI": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "TOGETIC"
+        }
+    ],
+    "NATU": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "XATU"
+        }
+    ],
+    "MAREEP": [
+        {
+            "method": "LEVEL",
+            "requirement": "15",
+            "evolution": "FLAAFFY"
+        }
+    ],
+    "FLAAFFY": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "AMPHAROS"
+        }
+    ],
+    "MARILL": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "AZUMARILL"
+        }
+    ],
+    "HOPPIP": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "SKIPLOOM"
+        }
+    ],
+    "SKIPLOOM": [
+        {
+            "method": "LEVEL",
+            "requirement": "27",
+            "evolution": "JUMPLUFF"
+        }
+    ],
+    "SUNKERN": [
+        {
+            "method": "ITEM",
+            "requirement": "SUN_STONE",
+            "evolution": "SUNFLORA"
+        }
+    ],
+    "WOOPER": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "QUAGSIRE"
+        }
+    ],
+    "PINECO": [
+        {
+            "method": "LEVEL",
+            "requirement": "31",
+            "evolution": "FORRETRESS"
+        }
+    ],
+    "SNUBBULL": [
+        {
+            "method": "LEVEL",
+            "requirement": "23",
+            "evolution": "GRANBULL"
+        }
+    ],
+    "TEDDIURSA": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "URSARING"
+        }
+    ],
+    "SLUGMA": [
+        {
+            "method": "LEVEL",
+            "requirement": "38",
+            "evolution": "MAGCARGO"
+        }
+    ],
+    "SWINUB": [
+        {
+            "method": "LEVEL",
+            "requirement": "33",
+            "evolution": "PILOSWINE"
+        }
+    ],
+    "REMORAID": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "OCTILLERY"
+        }
+    ],
+    "HOUNDOUR": [
+        {
+            "method": "LEVEL",
+            "requirement": "24",
+            "evolution": "HOUNDOOM"
+        }
+    ],
+    "PHANPY": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "DONPHAN"
+        }
+    ],
+    "TYROGUE": [
+        {
+            "method": "LEVEL_ATK_LT_DEF",
+            "requirement": "20",
+            "evolution": "HITMONCHAN"
+        },
+        {
+            "method": "LEVEL_ATK_GT_DEF",
+            "requirement": "20",
+            "evolution": "HITMONLEE"
+        },
+        {
+            "method": "LEVEL_ATK_EQ_DEF",
+            "requirement": "20",
+            "evolution": "HITMONTOP"
+        }
+    ],
+    "SMOOCHUM": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "JYNX"
+        }
+    ],
+    "ELEKID": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "ELECTABUZZ"
+        }
+    ],
+    "MAGBY": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "MAGMAR"
+        }
+    ],
+    "LARVITAR": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "PUPITAR"
+        }
+    ],
+    "PUPITAR": [
+        {
+            "method": "LEVEL",
+            "requirement": "55",
+            "evolution": "TYRANITAR"
+        }
+    ],
+    "TREECKO": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "GROVYLE"
+        }
+    ],
+    "GROVYLE": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "SCEPTILE"
+        }
+    ],
+    "TORCHIC": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "COMBUSKEN"
+        }
+    ],
+    "COMBUSKEN": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "BLAZIKEN"
+        }
+    ],
+    "MUDKIP": [
+        {
+            "method": "LEVEL",
+            "requirement": "16",
+            "evolution": "MARSHTOMP"
+        }
+    ],
+    "MARSHTOMP": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "SWAMPERT"
+        }
+    ],
+    "POOCHYENA": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "MIGHTYENA"
+        }
+    ],
+    "ZIGZAGOON": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "LINOONE"
+        }
+    ],
+    "WURMPLE": [
+        {
+            "method": "LEVEL_SILCOON",
+            "requirement": "7",
+            "evolution": "SILCOON"
+        },
+        {
+            "method": "LEVEL_CASCOON",
+            "requirement": "7",
+            "evolution": "CASCOON"
+        }
+    ],
+    "SILCOON": [
+        {
+            "method": "LEVEL",
+            "requirement": "10",
+            "evolution": "BEAUTIFLY"
+        }
+    ],
+    "CASCOON": [
+        {
+            "method": "LEVEL",
+            "requirement": "10",
+            "evolution": "DUSTOX"
+        }
+    ],
+    "LOTAD": [
+        {
+            "method": "LEVEL",
+            "requirement": "14",
+            "evolution": "LOMBRE"
+        }
+    ],
+    "LOMBRE": [
+        {
+            "method": "ITEM",
+            "requirement": "WATER_STONE",
+            "evolution": "LUDICOLO"
+        }
+    ],
+    "SEEDOT": [
+        {
+            "method": "LEVEL",
+            "requirement": "14",
+            "evolution": "NUZLEAF"
+        }
+    ],
+    "NUZLEAF": [
+        {
+            "method": "ITEM",
+            "requirement": "LEAF_STONE",
+            "evolution": "SHIFTRY"
+        }
+    ],
+    "NINCADA": [
+        {
+            "method": "LEVEL_NINJASK",
+            "requirement": "20",
+            "evolution": "NINJASK"
+        },
+        {
+            "method": "LEVEL_SHEDINJA",
+            "requirement": "20",
+            "evolution": "SHEDINJA"
+        }
+    ],
+    "TAILLOW": [
+        {
+            "method": "LEVEL",
+            "requirement": "22",
+            "evolution": "SWELLOW"
+        }
+    ],
+    "SHROOMISH": [
+        {
+            "method": "LEVEL",
+            "requirement": "23",
+            "evolution": "BRELOOM"
+        }
+    ],
+    "WINGULL": [
+        {
+            "method": "LEVEL",
+            "requirement": "25",
+            "evolution": "PELIPPER"
+        }
+    ],
+    "SURSKIT": [
+        {
+            "method": "LEVEL",
+            "requirement": "22",
+            "evolution": "MASQUERAIN"
+        }
+    ],
+    "WAILMER": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "WAILORD"
+        }
+    ],
+    "SKITTY": [
+        {
+            "method": "ITEM",
+            "requirement": "MOON_STONE",
+            "evolution": "DELCATTY"
+        }
+    ],
+    "BALTOY": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "CLAYDOL"
+        }
+    ],
+    "BARBOACH": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "WHISCASH"
+        }
+    ],
+    "CORPHISH": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "CRAWDAUNT"
+        }
+    ],
+    "FEEBAS": [
+        {
+            "method": "BEAUTY",
+            "requirement": "170",
+            "evolution": "MILOTIC"
+        }
+    ],
+    "CARVANHA": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "SHARPEDO"
+        }
+    ],
+    "TRAPINCH": [
+        {
+            "method": "LEVEL",
+            "requirement": "35",
+            "evolution": "VIBRAVA"
+        }
+    ],
+    "VIBRAVA": [
+        {
+            "method": "LEVEL",
+            "requirement": "45",
+            "evolution": "FLYGON"
+        }
+    ],
+    "MAKUHITA": [
+        {
+            "method": "LEVEL",
+            "requirement": "24",
+            "evolution": "HARIYAMA"
+        }
+    ],
+    "ELECTRIKE": [
+        {
+            "method": "LEVEL",
+            "requirement": "26",
+            "evolution": "MANECTRIC"
+        }
+    ],
+    "NUMEL": [
+        {
+            "method": "LEVEL",
+            "requirement": "33",
+            "evolution": "CAMERUPT"
+        }
+    ],
+    "SPHEAL": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "SEALEO"
+        }
+    ],
+    "SEALEO": [
+        {
+            "method": "LEVEL",
+            "requirement": "44",
+            "evolution": "WALREIN"
+        }
+    ],
+    "CACNEA": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "CACTURNE"
+        }
+    ],
+    "SNORUNT": [
+        {
+            "method": "LEVEL",
+            "requirement": "42",
+            "evolution": "GLALIE"
+        }
+    ],
+    "AZURILL": [
+        {
+            "method": "FRIENDSHIP",
+            "requirement": "0",
+            "evolution": "MARILL"
+        }
+    ],
+    "SPOINK": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "GRUMPIG"
+        }
+    ],
+    "MEDITITE": [
+        {
+            "method": "LEVEL",
+            "requirement": "37",
+            "evolution": "MEDICHAM"
+        }
+    ],
+    "SWABLU": [
+        {
+            "method": "LEVEL",
+            "requirement": "35",
+            "evolution": "ALTARIA"
+        }
+    ],
+    "WYNAUT": [
+        {
+            "method": "LEVEL",
+            "requirement": "15",
+            "evolution": "WOBBUFFET"
+        }
+    ],
+    "DUSKULL": [
+        {
+            "method": "LEVEL",
+            "requirement": "37",
+            "evolution": "DUSCLOPS"
+        }
+    ],
+    "SLAKOTH": [
+        {
+            "method": "LEVEL",
+            "requirement": "18",
+            "evolution": "VIGOROTH"
+        }
+    ],
+    "VIGOROTH": [
+        {
+            "method": "LEVEL",
+            "requirement": "36",
+            "evolution": "SLAKING"
+        }
+    ],
+    "GULPIN": [
+        {
+            "method": "LEVEL",
+            "requirement": "26",
+            "evolution": "SWALOT"
+        }
+    ],
+    "WHISMUR": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "LOUDRED"
+        }
+    ],
+    "LOUDRED": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "EXPLOUD"
+        }
+    ],
+    "CLAMPERL": [
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "DEEP_SEA_TOOTH",
+            "evolution": "HUNTAIL"
+        },
+        {
+            "method": "TRADE_ITEM",
+            "requirement": "DEEP_SEA_SCALE",
+            "evolution": "GOREBYSS"
+        }
+    ],
+    "SHUPPET": [
+        {
+            "method": "LEVEL",
+            "requirement": "37",
+            "evolution": "BANETTE"
+        }
+    ],
+    "ARON": [
+        {
+            "method": "LEVEL",
+            "requirement": "32",
+            "evolution": "LAIRON"
+        }
+    ],
+    "LAIRON": [
+        {
+            "method": "LEVEL",
+            "requirement": "42",
+            "evolution": "AGGRON"
+        }
+    ],
+    "LILEEP": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "CRADILY"
+        }
+    ],
+    "ANORITH": [
+        {
+            "method": "LEVEL",
+            "requirement": "40",
+            "evolution": "ARMALDO"
+        }
+    ],
+    "RALTS": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "KIRLIA"
+        }
+    ],
+    "KIRLIA": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "GARDEVOIR"
+        }
+    ],
+    "BAGON": [
+        {
+            "method": "LEVEL",
+            "requirement": "30",
+            "evolution": "SHELGON"
+        }
+    ],
+    "SHELGON": [
+        {
+            "method": "LEVEL",
+            "requirement": "50",
+            "evolution": "SALAMENCE"
+        }
+    ],
+    "BELDUM": [
+        {
+            "method": "LEVEL",
+            "requirement": "20",
+            "evolution": "METANG"
+        }
+    ],
+    "METANG": [
+        {
+            "method": "LEVEL",
+            "requirement": "45",
+            "evolution": "METAGROSS"
+        }
+    ]
+}

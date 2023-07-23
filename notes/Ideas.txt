@@ -1,0 +1,41 @@
+Best Pokemon per matchup (Calculate all pokemon before adding to Greedy Best Team):
+- Assume pokemon has access to all possible moves available at current level / point in the game (TODO: determine how to allocate limited TMs / Move Relearner items. Idea: only give learnest moves + HMs on first go, then recalc value add if taught new move)
+- On each list, if there are ties, sort by Pokemon that baits the weakest move
+1. Outspeed + 1-shot
+2. Guaranteed kill
+3. Guarantee of lowering stats (or baiting move) such that a switch in (or pivot) can kill: speed drop moves -> other Pokémon outspeed & kill; damage/poison/burn/etc -> lower HP guarantees kill
+4. Highest likelihood of kill (crit + stat change probabilities included)
+5. Highest likelihood of lowering stats such that a switch in (or pivot) can kill: sleep/confuse/attract/chance to miss moves/etc
+6. Highest likelihood of lowering stats such that a switch in (or pivot) has the highest likelihood of killing
+
+
+Greedy Best Team (depth firsst: calculate a full team's probability before moving on):
+1. For first opponent Pokémon, find first pokemon (of type 1, then 2 if none in type 1, etc.) & what mon/move they will bait
+2. For the baited mon/move, find next pokemon (check all party members first) (of type 1, etc.) including tanking the baited move first if not current mon. Repeat for all opponent mons and track win probability (multiplied probabilities of beating each mon).
+3. Repeat steps 1 & 2 for all combinations of mons, immediately pruning if a combined win probability is less than the current best win probability.
+    - If ties, pick team with lowest value mons
+    - If win probability is lower than the total estimated win probability increase provided by a mon across the rest of the game, re-calculate with that mon allowing to be sacrificed (start with lowest-value mon)
+4. After finding win probability, re-calc 6 more times, finding the best team without each of the mons on the best team
+    - mon value = best win probability - win probability of best team without mon
+
+
+Total Value:
+- Calc every battle in the game with all current mons & every permutation of encounters to determine the value add of each
+- For encounters, calculate in-battle status using a probability distribution (when attacking, attack damage range = e.g. Attack IVs 0-31 with +, -, or neutral nature)
+- Expected value of each encounter = total summed value in future battles * % chance to encounter
+- Expected value of an encounter type (fishing/surfing/grass/etc) is the total value of all encounters in that type
+- Goal: maximize combined total value from encounters
+
+At each point in the game, you can calculate the expected value of every encounter route/type.
+If the value is less than the possible value you could get from getting the encounter later, then you should delay.
+Instead of determining the encounter's value alone, you calculate the encounter's value based on the 
+
+
+
+Expected value of each mon:
+- 1v1 with the mon at the assigned level vs. every pokemon of every trainer in the game
+- Use AI to determine usage of status moves, priority moves, damage moves, healing moves, buffing moves
+- Calculate expected total health remaining (as a %) vs. the mon and save it
+- Once you have expected % remaining (EPR) for every your mon vs. their mon combo, calculate the expected value of each mon
+- Expected value = (EPR / Total EPR of all of your mons) for every opponent mon in the game
+
