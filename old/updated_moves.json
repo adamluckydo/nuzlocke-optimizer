@@ -1,0 +1,3129 @@
+{
+  "(No Move)": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal"
+  },
+  "Absorb": {
+    "bp": 20,
+    "type": "Grass",
+    "drain": [
+      1,
+      2
+    ],
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Heal",
+    "effectChance": 0
+  },
+  "Acid": {
+    "bp": 40,
+    "type": "Poison",
+    "target": "allAdjacentFoes",
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 10
+  },
+  "Acid Armor": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Poison",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Raise Defence sharply",
+    "effectChance": 0
+  },
+  "Aerial Ace": {
+    "bp": 60,
+    "type": "Flying",
+    "makesContact": true,
+    "pp": 32,
+    "accuracy": 0,
+    "effect": "100% no Type diff.",
+    "effectChance": 0
+  },
+  "Aeroblast": {
+    "bp": 100,
+    "type": "Flying",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Agility": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Raise Speed sharply",
+    "effectChance": 0
+  },
+  "Air Cutter": {
+    "bp": 55,
+    "type": "Flying",
+    "target": "allAdjacentFoes"
+  },
+  "Amnesia": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Raise Spec. Def. sharply",
+    "effectChance": 0
+  },
+  "Ancient Power": {
+    "bp": 60,
+    "type": "Rock",
+    "makesContact": true
+  },
+  "Arm Thrust": {
+    "bp": 15,
+    "type": "Fighting",
+    "multihit": [
+      2,
+      5
+    ],
+    "makesContact": true
+  },
+  "Aromatherapy": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 2,
+    "accuracy": 0,
+    "effect": "Restore Team's Status",
+    "effectChance": 0
+  },
+  "Assist": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Assist",
+    "effectChance": 0
+  },
+  "Astonish": {
+    "bp": 30,
+    "type": "Ghost",
+    "makesContact": true
+  },
+  "Attract": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "50% chance of not Attacking",
+    "effectChance": 0
+  },
+  "Aurora Beam": {
+    "bp": 65,
+    "type": "Ice",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Lower Attk.",
+    "effectChance": 10
+  },
+  "Barrage": {
+    "bp": 15,
+    "type": "Normal",
+    "multihit": [
+      2,
+      5
+    ]
+  },
+  "Barrier": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Raise Defence sharply",
+    "effectChance": 0
+  },
+  "Baton Pass": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 40,
+    "accuracy": 0,
+    "effect": "Baton Pass",
+    "effectChance": 0
+  },
+  "Beat Up": {
+    "bp": 10,
+    "type": "Dark",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Beat Up",
+    "effectChance": 0
+  },
+  "Belly Drum": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Belly Drum",
+    "effectChance": 0
+  },
+  "Bide": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Take dmg. + attk. in 3 turns",
+    "effectChance": 0
+  },
+  "Bind": {
+    "bp": 15,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "2-5 Hits + Lower Evas.",
+    "effectChance": 100
+  },
+  "Bite": {
+    "bp": 60,
+    "type": "Dark",
+    "makesContact": true,
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Target flinches",
+    "effectChance": 30
+  },
+  "Blast Burn": {
+    "bp": 150,
+    "type": "Fire",
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "Attack + Charge",
+    "effectChance": 0
+  },
+  "Blaze Kick": {
+    "bp": 85,
+    "type": "Fire",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Burn chance increased crit",
+    "effectChance": 30
+  },
+  "Blizzard": {
+    "bp": 120,
+    "type": "Ice",
+    "target": "allAdjacentFoes",
+    "pp": 8,
+    "accuracy": 70,
+    "effect": "Freeze",
+    "effectChance": 10
+  },
+  "Block": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Prevent escape",
+    "effectChance": 0
+  },
+  "Body Slam": {
+    "bp": 85,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Parlyze",
+    "effectChance": 30
+  },
+  "Bone Club": {
+    "bp": 65,
+    "type": "Ground",
+    "pp": 20,
+    "accuracy": 85,
+    "effect": "Target flinches",
+    "effectChance": 10
+  },
+  "Bone Rush": {
+    "bp": 25,
+    "type": "Ground",
+    "multihit": [
+      2,
+      5
+    ],
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Bonemerang": {
+    "bp": 50,
+    "type": "Ground",
+    "multihit": 2,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Hit 2x",
+    "effectChance": 0
+  },
+  "Bounce": {
+    "bp": 85,
+    "type": "Flying",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 85,
+    "effect": "Fly/Bounce/Dig",
+    "effectChance": 30
+  },
+  "Brick Break": {
+    "bp": 75,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Brick Break",
+    "effectChance": 0
+  },
+  "Bubble": {
+    "bp": 20,
+    "type": "Water",
+    "target": "allAdjacentFoes",
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Lower Spd.",
+    "effectChance": 10
+  },
+  "Bubble Beam": {
+    "bp": 65,
+    "type": "Water"
+  },
+  "Bulk Up": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Fighting",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "+1 Atk +1 Def",
+    "effectChance": 0
+  },
+  "Bullet Seed": {
+    "bp": 10,
+    "type": "Grass",
+    "multihit": [
+      2,
+      5
+    ],
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Hit 2x",
+    "effectChance": 0
+  },
+  "Calm Mind": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "+1 Spa +1 Spdef",
+    "effectChance": 0
+  },
+  "Camouflage": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Camouflage",
+    "effectChance": 0
+  },
+  "Charge": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Electric",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Charge",
+    "effectChance": 0
+  },
+  "Charm": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Lower Attack sharply",
+    "effectChance": 0
+  },
+  "Clamp": {
+    "bp": 35,
+    "type": "Water",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "2-5 Hits + Lower Evas.",
+    "effectChance": 100
+  },
+  "Comet Punch": {
+    "bp": 18,
+    "type": "Normal",
+    "multihit": [
+      2,
+      5
+    ],
+    "makesContact": true
+  },
+  "Confuse Ray": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ghost",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Confuse target",
+    "effectChance": 0
+  },
+  "Confusion": {
+    "bp": 50,
+    "type": "Psychic",
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Confuse",
+    "effectChance": 10
+  },
+  "Constrict": {
+    "bp": 10,
+    "type": "Normal",
+    "makesContact": true
+  },
+  "Conversion": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 30,
+    "accuracy": 0,
+    "effect": "Change to Attack type",
+    "effectChance": 0
+  },
+  "Conversion 2": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Own Type > Opp. Type",
+    "effectChance": 0
+  },
+  "Cosmic Power": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 6,
+    "accuracy": 0,
+    "effect": "+1 Def +Spdef",
+    "effectChance": 0
+  },
+  "Cotton Spore": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass"
+  },
+  "Counter": {
+    "bp": 0,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Counter Attack",
+    "effectChance": 0
+  },
+  "Covet": {
+    "bp": 40,
+    "type": "Normal"
+  },
+  "Crabhammer": {
+    "bp": 90,
+    "type": "Water",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Cross Chop": {
+    "bp": 100,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 8,
+    "accuracy": 90,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Crunch": {
+    "bp": 80,
+    "type": "Dark",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Lower Spec. Def.",
+    "effectChance": 20
+  },
+  "Crush Claw": {
+    "bp": 75,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 50
+  },
+  "Curse": {
+    "bp": 0,
+    "category": "Status",
+    "type": "???",
+    "pp": 6,
+    "accuracy": 0,
+    "effect": "Cause Curse",
+    "effectChance": 0
+  },
+  "Cut": {
+    "bp": 50,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Defense Curl": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Defense Curl",
+    "effectChance": 0
+  },
+  "Destiny Bond": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ghost",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Defeat Pokemon",
+    "effectChance": 0
+  },
+  "Detect": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Fighting",
+    "priority": 3,
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Protect target",
+    "effectChance": 0
+  },
+  "Dig": {
+    "bp": 60,
+    "type": "Ground",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Fly/Bounce/Dig",
+    "effectChance": 0
+  },
+  "Disable": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Disable last used Move",
+    "effectChance": 0
+  },
+  "Dive": {
+    "bp": 60,
+    "type": "Water",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Fly/Bounce/Dig",
+    "effectChance": 0
+  },
+  "Dizzy Punch": {
+    "bp": 70,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Confuse",
+    "effectChance": 30
+  },
+  "Doom Desire": {
+    "bp": 120,
+    "type": "Steel",
+    "pp": 5,
+    "accuracy": 85,
+    "effect": "Future Sight",
+    "effectChance": 0
+  },
+  "Double Kick": {
+    "bp": 30,
+    "type": "Fighting",
+    "multihit": 2,
+    "makesContact": true,
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Hit 2x",
+    "effectChance": 0
+  },
+  "Double Slap": {
+    "bp": 15,
+    "type": "Normal",
+    "multihit": [
+      2,
+      5
+    ],
+    "makesContact": true
+  },
+  "Double Team": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 6,
+    "accuracy": 0,
+    "effect": "Raise Evas.",
+    "effectChance": 0
+  },
+  "Double-Edge": {
+    "bp": 120,
+    "type": "Normal",
+    "recoil": [
+      1,
+      3
+    ],
+    "makesContact": true
+  },
+  "Dragon Breath": {
+    "bp": 60,
+    "type": "Dragon"
+  },
+  "Dragon Claw": {
+    "bp": 80,
+    "type": "Dragon",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Dragon Dance": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dragon",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "+1 Atk +1 Spe",
+    "effectChance": 0
+  },
+  "Dragon Rage": {
+    "bp": 0,
+    "type": "Dragon",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Always 40 HP Hit",
+    "effectChance": 0
+  },
+  "Dream Eater": {
+    "bp": 100,
+    "type": "Psychic",
+    "drain": [
+      1,
+      2
+    ],
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Hit if Opp. is sleeping",
+    "effectChance": 0
+  },
+  "Drill Peck": {
+    "bp": 80,
+    "type": "Flying",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Dynamic Punch": {
+    "bp": 100,
+    "type": "Fighting",
+    "makesContact": true
+  },
+  "Earthquake": {
+    "bp": 100,
+    "type": "Ground",
+    "target": "allAdjacent",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Earthquake",
+    "effectChance": 0
+  },
+  "Egg Bomb": {
+    "bp": 100,
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "1/3 Recoil",
+    "effectChance": 0
+  },
+  "Ember": {
+    "bp": 40,
+    "type": "Fire",
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Burn",
+    "effectChance": 10
+  },
+  "Encore": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Opp. repeats last Move",
+    "effectChance": 0
+  },
+  "Endeavor": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Endeavor",
+    "effectChance": 0
+  },
+  "Endure": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "priority": 4,
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Survive Hit with at leat 1 HP",
+    "effectChance": 0
+  },
+  "Eruption": {
+    "bp": 150,
+    "type": "Fire",
+    "target": "allAdjacentFoes"
+  },
+  "Explosion": {
+    "bp": 250,
+    "type": "Normal",
+    "target": "allAdjacent",
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Selfdestruct",
+    "effectChance": 0
+  },
+  "Extrasensory": {
+    "bp": 80,
+    "type": "Psychic",
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Flinch 2x on minimized",
+    "effectChance": 30
+  },
+  "Extreme Speed": {
+    "bp": 80,
+    "type": "Normal",
+    "priority": 1,
+    "makesContact": true
+  },
+  "Facade": {
+    "bp": 70,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Facade",
+    "effectChance": 0
+  },
+  "Fake Out": {
+    "bp": 40,
+    "type": "Normal",
+    "priority": 1,
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Fake Out",
+    "effectChance": 0
+  },
+  "Fake Tears": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dark",
+    "pp": 3,
+    "accuracy": 100,
+    "effect": "Lower Spec. Def. sharply",
+    "effectChance": 0
+  },
+  "False Swipe": {
+    "bp": 40,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 40,
+    "accuracy": 100,
+    "effect": "Lower HP to 1",
+    "effectChance": 0
+  },
+  "Feather Dance": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Flying"
+  },
+  "Feint Attack": {
+    "bp": 60,
+    "type": "Dark"
+  },
+  "Fire Blast": {
+    "bp": 120,
+    "type": "Fire",
+    "pp": 8,
+    "accuracy": 85,
+    "effect": "Burn",
+    "effectChance": 10
+  },
+  "Fire Punch": {
+    "bp": 75,
+    "type": "Fire",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Burn",
+    "effectChance": 10
+  },
+  "Fire Spin": {
+    "bp": 15,
+    "type": "Fire",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "2-5 Hits + Lower Evas.",
+    "effectChance": 100
+  },
+  "Fissure": {
+    "bp": 0,
+    "type": "Ground"
+  },
+  "Flail": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Less HP = More Power",
+    "effectChance": 0
+  },
+  "Flame Wheel": {
+    "bp": 60,
+    "type": "Fire",
+    "makesContact": true,
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Burn",
+    "effectChance": 10
+  },
+  "Flamethrower": {
+    "bp": 95,
+    "type": "Fire",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Burn",
+    "effectChance": 10
+  },
+  "Flash": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 70,
+    "effect": "Lower Acc.",
+    "effectChance": 0
+  },
+  "Flatter": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dark",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Confuse target",
+    "effectChance": 0
+  },
+  "Fly": {
+    "bp": 70,
+    "type": "Flying",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 95,
+    "effect": "Fly/Bounce/Dig",
+    "effectChance": 0
+  },
+  "Focus Energy": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Raise Critical chance",
+    "effectChance": 0
+  },
+  "Focus Punch": {
+    "bp": 150,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Focus Punch",
+    "effectChance": 0
+  },
+  "Follow Me": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "priority": 3,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Follow Me",
+    "effectChance": 0
+  },
+  "Foresight": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Foresight",
+    "effectChance": 0
+  },
+  "Frenzy Plant": {
+    "bp": 150,
+    "type": "Grass",
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "Attack + Charge",
+    "effectChance": 0
+  },
+  "Frustration": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Fury Attack": {
+    "bp": 15,
+    "type": "Normal",
+    "multihit": [
+      2,
+      5
+    ],
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 85,
+    "effect": "Hit 2-5x",
+    "effectChance": 0
+  },
+  "Fury Cutter": {
+    "bp": 10,
+    "type": "Bug",
+    "makesContact": true
+  },
+  "Fury Swipes": {
+    "bp": 18,
+    "type": "Normal",
+    "multihit": [
+      2,
+      5
+    ],
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 80,
+    "effect": "Hit 2-5x",
+    "effectChance": 0
+  },
+  "Future Sight": {
+    "bp": 80,
+    "type": "Psychic"
+  },
+  "Giga Drain": {
+    "bp": 60,
+    "type": "Grass",
+    "drain": [
+      1,
+      2
+    ],
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Heal",
+    "effectChance": 0
+  },
+  "Glare": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Parlyz",
+    "effectChance": 0
+  },
+  "Grass Whistle": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "isSound": true
+  },
+  "Growl": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "target": "allAdjacentFoes",
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Lower Attk.",
+    "effectChance": 0
+  },
+  "Growth": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Raise Sp. Attk.",
+    "effectChance": 0
+  },
+  "Grudge": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ghost",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Grudge",
+    "effectChance": 0
+  },
+  "Guillotine": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 30,
+    "effect": "1 Hit K.O",
+    "effectChance": 0
+  },
+  "Gust": {
+    "bp": 40,
+    "type": "Flying",
+    "pp": 35,
+    "accuracy": 100,
+    "effect": "Hit's bounce/fly",
+    "effectChance": 0
+  },
+  "Hail": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ice",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Hail",
+    "effectChance": 0
+  },
+  "Harden": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Raise Def.",
+    "effectChance": 0
+  },
+  "Haze": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ice",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "All Stats normal",
+    "effectChance": 0
+  },
+  "Headbutt": {
+    "bp": 70,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Target flinches",
+    "effectChance": 30
+  },
+  "Heal Bell": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "pp": 2,
+    "accuracy": 0,
+    "effect": "Restore Team's Status",
+    "effectChance": 0
+  },
+  "Heat Wave": {
+    "bp": 100,
+    "type": "Fire",
+    "target": "allAdjacentFoes",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Burn",
+    "effectChance": 20
+  },
+  "Helping Hand": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "priority": 5,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Helping Hand",
+    "effectChance": 0
+  },
+  "Hidden Power": {
+    "bp": 0,
+    "type": "Normal",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Hidden Power Bug": {
+    "bp": 70,
+    "type": "Bug"
+  },
+  "Hidden Power Dark": {
+    "bp": 70,
+    "type": "Dark"
+  },
+  "Hidden Power Dragon": {
+    "bp": 70,
+    "type": "Dragon"
+  },
+  "Hidden Power Electric": {
+    "bp": 70,
+    "type": "Electric"
+  },
+  "Hidden Power Fighting": {
+    "bp": 70,
+    "type": "Fighting"
+  },
+  "Hidden Power Fire": {
+    "bp": 70,
+    "type": "Fire"
+  },
+  "Hidden Power Flying": {
+    "bp": 70,
+    "type": "Flying"
+  },
+  "Hidden Power Ghost": {
+    "bp": 70,
+    "type": "Ghost"
+  },
+  "Hidden Power Grass": {
+    "bp": 70,
+    "type": "Grass"
+  },
+  "Hidden Power Ground": {
+    "bp": 70,
+    "type": "Ground"
+  },
+  "Hidden Power Ice": {
+    "bp": 70,
+    "type": "Ice"
+  },
+  "Hidden Power Poison": {
+    "bp": 70,
+    "type": "Poison"
+  },
+  "Hidden Power Psychic": {
+    "bp": 70,
+    "type": "Psychic"
+  },
+  "Hidden Power Rock": {
+    "bp": 70,
+    "type": "Rock"
+  },
+  "Hidden Power Steel": {
+    "bp": 70,
+    "type": "Steel"
+  },
+  "Hidden Power Water": {
+    "bp": 70,
+    "type": "Water"
+  },
+  "High Jump Kick": {
+    "bp": 85,
+    "type": "Fighting",
+    "hasCrashDamage": true,
+    "makesContact": true
+  },
+  "Horn Attack": {
+    "bp": 65,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Horn Drill": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true
+  },
+  "Howl": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Raise Attk.",
+    "effectChance": 0
+  },
+  "Hydro Cannon": {
+    "bp": 150,
+    "type": "Water",
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "Attack + Charge",
+    "effectChance": 0
+  },
+  "Hydro Pump": {
+    "bp": 120,
+    "type": "Water",
+    "pp": 8,
+    "accuracy": 85,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Hyper Beam": {
+    "bp": 150,
+    "type": "Normal",
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "Attack + Charge",
+    "effectChance": 0
+  },
+  "Hyper Fang": {
+    "bp": 80,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Target flinches",
+    "effectChance": 10
+  },
+  "Hyper Voice": {
+    "bp": 90,
+    "type": "Normal",
+    "isSound": true,
+    "target": "allAdjacentFoes",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 20
+  },
+  "Hypnosis": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 24,
+    "accuracy": 70,
+    "effect": "Put to Sleep",
+    "effectChance": 0
+  },
+  "Ice Ball": {
+    "bp": 30,
+    "type": "Ice",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 90,
+    "effect": "Hit until miss",
+    "effectChance": 0
+  },
+  "Ice Beam": {
+    "bp": 95,
+    "type": "Ice",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Freeze",
+    "effectChance": 10
+  },
+  "Ice Punch": {
+    "bp": 75,
+    "type": "Ice",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Freeze",
+    "effectChance": 10
+  },
+  "Icicle Spear": {
+    "bp": 10,
+    "type": "Ice",
+    "multihit": [
+      2,
+      5
+    ]
+  },
+  "Icy Wind": {
+    "bp": 55,
+    "type": "Ice",
+    "target": "allAdjacentFoes",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Lower Spd.",
+    "effectChance": 100
+  },
+  "Imprison": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Imprison",
+    "effectChance": 0
+  },
+  "Ingrain": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Ingrain",
+    "effectChance": 0
+  },
+  "Iron Defense": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Steel",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Raise Defence sharply",
+    "effectChance": 0
+  },
+  "Iron Tail": {
+    "bp": 100,
+    "type": "Steel",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 90,
+    "effect": "Lower Def.",
+    "effectChance": 30
+  },
+  "Jump Kick": {
+    "bp": 70,
+    "type": "Fighting",
+    "hasCrashDamage": true,
+    "makesContact": true,
+    "pp": 25,
+    "accuracy": 95,
+    "effect": "Hit or Self damage",
+    "effectChance": 0
+  },
+  "Karate Chop": {
+    "bp": 50,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Kinesis": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 6,
+    "accuracy": 100,
+    "effect": "Lower Acc.",
+    "effectChance": 0
+  },
+  "Knock Off": {
+    "bp": 20,
+    "type": "Dark",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Knock Off",
+    "effectChance": 100
+  },
+  "Leaf Blade": {
+    "bp": 70,
+    "type": "Grass",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Leech Life": {
+    "bp": 20,
+    "type": "Bug",
+    "drain": [
+      1,
+      2
+    ],
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Heal",
+    "effectChance": 0
+  },
+  "Leech Seed": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Heal each round",
+    "effectChance": 0
+  },
+  "Leer": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "target": "allAdjacentFoes",
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 0
+  },
+  "Lick": {
+    "bp": 20,
+    "type": "Ghost",
+    "makesContact": true,
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Parlyze",
+    "effectChance": 30
+  },
+  "Light Screen": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "1/2 Spec. dmg f. 5 Rounds",
+    "effectChance": 0
+  },
+  "Lock-On": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal"
+  },
+  "Lovely Kiss": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 85,
+    "effect": "Put to Sleep",
+    "effectChance": 0
+  },
+  "Low Kick": {
+    "bp": 0,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Low Kick",
+    "effectChance": 0
+  },
+  "Luster Purge": {
+    "bp": 70,
+    "type": "Psychic",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Lower Spec. Def.",
+    "effectChance": 50
+  },
+  "Mach Punch": {
+    "bp": 40,
+    "type": "Fighting",
+    "priority": 1,
+    "makesContact": true,
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Always 1st strike",
+    "effectChance": 0
+  },
+  "Magic Coat": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "priority": 4,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Magic Coat",
+    "effectChance": 0
+  },
+  "Magical Leaf": {
+    "bp": 60,
+    "type": "Grass",
+    "pp": 20,
+    "accuracy": 0,
+    "effect": "100% no Type diff.",
+    "effectChance": 0
+  },
+  "Magnitude": {
+    "bp": 0,
+    "type": "Ground",
+    "target": "allAdjacent",
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Magnitude",
+    "effectChance": 0
+  },
+  "Mean Look": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Prevent escape",
+    "effectChance": 0
+  },
+  "Meditate": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Raise Attk.",
+    "effectChance": 0
+  },
+  "Mega Drain": {
+    "bp": 40,
+    "type": "Grass",
+    "drain": [
+      1,
+      2
+    ],
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Heal",
+    "effectChance": 0
+  },
+  "Mega Kick": {
+    "bp": 120,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 75,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Mega Punch": {
+    "bp": 80,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 85,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Megahorn": {
+    "bp": 120,
+    "type": "Bug",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 90,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Memento": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dark",
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Memento",
+    "effectChance": 0
+  },
+  "Metal Claw": {
+    "bp": 50,
+    "type": "Steel",
+    "makesContact": true,
+    "pp": 35,
+    "accuracy": 95,
+    "effect": "Raise Own Attk.",
+    "effectChance": 10
+  },
+  "Metal Sound": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Steel",
+    "isSound": true
+  },
+  "Meteor Mash": {
+    "bp": 100,
+    "type": "Steel",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Raise Own Attk.",
+    "effectChance": 30
+  },
+  "Metronome": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 35,
+    "accuracy": 0,
+    "effect": "Cast random Move",
+    "effectChance": 0
+  },
+  "Milk Drink": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Heal 1/2",
+    "effectChance": 0
+  },
+  "Mimic": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Copy Opp.'s last Move",
+    "effectChance": 0
+  },
+  "Mind Reader": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Next attack Hits 100%",
+    "effectChance": 0
+  },
+  "Minimize": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 6,
+    "accuracy": 0,
+    "effect": "Raise Evas.",
+    "effectChance": 0
+  },
+  "Mirror Coat": {
+    "bp": 0,
+    "type": "Psychic",
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Mirror Coat",
+    "effectChance": 0
+  },
+  "Mirror Move": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Flying",
+    "pp": 20,
+    "accuracy": 0,
+    "effect": "Copy Attack of Opp.",
+    "effectChance": 0
+  },
+  "Mist": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ice",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Prevent Status changes",
+    "effectChance": 0
+  },
+  "Mist Ball": {
+    "bp": 70,
+    "type": "Psychic",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Lower Spec. Attk.",
+    "effectChance": 50
+  },
+  "Moonlight": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Recover health",
+    "effectChance": 0
+  },
+  "Morning Sun": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Recover health",
+    "effectChance": 0
+  },
+  "Mud Shot": {
+    "bp": 55,
+    "type": "Ground",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Lower Spd.",
+    "effectChance": 100
+  },
+  "Mud Sport": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ground",
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Mud Spot",
+    "effectChance": 0
+  },
+  "Mud-Slap": {
+    "bp": 20,
+    "type": "Ground"
+  },
+  "Muddy Water": {
+    "bp": 95,
+    "type": "Water",
+    "target": "allAdjacentFoes",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Lower Acc.",
+    "effectChance": 30
+  },
+  "Nature Power": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 20,
+    "accuracy": 95,
+    "effect": "Nature Power",
+    "effectChance": 0
+  },
+  "Needle Arm": {
+    "bp": 60,
+    "type": "Grass",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Flinch 2x on minimized",
+    "effectChance": 30
+  },
+  "Night Shade": {
+    "bp": 0,
+    "type": "Ghost",
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Power depends on Lvl.",
+    "effectChance": 0
+  },
+  "Nightmare": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ghost",
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Cause Nightmares",
+    "effectChance": 0
+  },
+  "Octazooka": {
+    "bp": 65,
+    "type": "Water",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Lower Acc.",
+    "effectChance": 50
+  },
+  "Odor Sleuth": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 3,
+    "accuracy": 100,
+    "effect": "Foresight",
+    "effectChance": 0
+  },
+  "Outrage": {
+    "bp": 90,
+    "type": "Dragon",
+    "makesContact": true
+  },
+  "Overheat": {
+    "bp": 140,
+    "type": "Fire",
+    "self": {
+      "boosts": {
+        "spa": -2
+      }
+    },
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "1/3 Recoil",
+    "effectChance": 0
+  },
+  "Pain Split": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Rest. HP ((HP + Opp. HP) / 2)",
+    "effectChance": 0
+  },
+  "Paleo Wave": {
+    "bp": 85,
+    "type": "Rock"
+  },
+  "Pay Day": {
+    "bp": 40,
+    "type": "Normal",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Earn money",
+    "effectChance": 100
+  },
+  "Peck": {
+    "bp": 35,
+    "type": "Flying",
+    "makesContact": true,
+    "pp": 35,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Perish Song": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Defeat after 3 rounds",
+    "effectChance": 0
+  },
+  "Petal Dance": {
+    "bp": 70,
+    "type": "Grass",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Lower Spec. Def.",
+    "effectChance": 10
+  },
+  "Pin Missile": {
+    "bp": 14,
+    "type": "Bug",
+    "multihit": [
+      2,
+      5
+    ],
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Hit 2-5x",
+    "effectChance": 0
+  },
+  "Poison Fang": {
+    "bp": 50,
+    "type": "Poison",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Badly Poison Chance",
+    "effectChance": 50
+  },
+  "Poison Gas": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Poison"
+  },
+  "Poison Powder": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Poison"
+  },
+  "Poison Sting": {
+    "bp": 15,
+    "type": "Poison",
+    "pp": 35,
+    "accuracy": 100,
+    "effect": "Poison",
+    "effectChance": 30
+  },
+  "Poison Tail": {
+    "bp": 50,
+    "type": "Poison",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Badly Poison Chance",
+    "effectChance": 30
+  },
+  "Pound": {
+    "bp": 40,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 35,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Powder Snow": {
+    "bp": 40,
+    "type": "Ice",
+    "target": "allAdjacentFoes",
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Freeze",
+    "effectChance": 10
+  },
+  "Present": {
+    "bp": 0,
+    "type": "Normal",
+    "pp": 15,
+    "accuracy": 90,
+    "effect": "Damage or Heal",
+    "effectChance": 0
+  },
+  "Protect": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "priority": 3,
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Protect target",
+    "effectChance": 0
+  },
+  "Psybeam": {
+    "bp": 65,
+    "type": "Psychic",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Confuse",
+    "effectChance": 10
+  },
+  "Psych Up": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Psych Up",
+    "effectChance": 0
+  },
+  "Psychic": {
+    "bp": 90,
+    "type": "Psychic",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Lower Spec. Def.",
+    "effectChance": 10
+  },
+  "Psycho Boost": {
+    "bp": 140,
+    "type": "Psychic",
+    "self": {
+      "boosts": {
+        "spa": -2
+      }
+    },
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "take 1/4 damage",
+    "effectChance": 100
+  },
+  "Psywave": {
+    "bp": 0,
+    "type": "Psychic",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Power depends on Lvl.",
+    "effectChance": 0
+  },
+  "Pursuit": {
+    "bp": 40,
+    "type": "Dark",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Pursuit",
+    "effectChance": 0
+  },
+  "Quick Attack": {
+    "bp": 40,
+    "type": "Normal",
+    "priority": 1,
+    "makesContact": true,
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "Always 1st strike",
+    "effectChance": 0
+  },
+  "Rage": {
+    "bp": 20,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Raise Attack",
+    "effectChance": 0
+  },
+  "Rain Dance": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Water",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Rain Dance",
+    "effectChance": 0
+  },
+  "Rapid Spin": {
+    "bp": 20,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Rapid Spin",
+    "effectChance": 0
+  },
+  "Razor Leaf": {
+    "bp": 55,
+    "type": "Grass",
+    "target": "allAdjacentFoes",
+    "pp": 25,
+    "accuracy": 95,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Razor Wind": {
+    "bp": 80,
+    "type": "Normal",
+    "target": "allAdjacentFoes",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Raise Critical chance",
+    "effectChance": 0
+  },
+  "Recover": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Recover health",
+    "effectChance": 0
+  },
+  "Recycle": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Recycle",
+    "effectChance": 0
+  },
+  "Reflect": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Taken damage is 1/2",
+    "effectChance": 0
+  },
+  "Refresh": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Refresh",
+    "effectChance": 0
+  },
+  "Rest": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Sleep 3 turns + Full HP",
+    "effectChance": 0
+  },
+  "Return": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Revenge": {
+    "bp": 60,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Revenge",
+    "effectChance": 0
+  },
+  "Reversal": {
+    "bp": 0,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Less HP = More Power",
+    "effectChance": 0
+  },
+  "Roar": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Scare Opp./Switch PKMN",
+    "effectChance": 0
+  },
+  "Rock Blast": {
+    "bp": 25,
+    "type": "Rock",
+    "multihit": [
+      2,
+      5
+    ],
+    "pp": 10,
+    "accuracy": 80,
+    "effect": "Hit 2-5x",
+    "effectChance": 0
+  },
+  "Rock Slide": {
+    "bp": 75,
+    "type": "Rock",
+    "target": "allAdjacentFoes",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Target flinches",
+    "effectChance": 30
+  },
+  "Rock Smash": {
+    "bp": 20,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 50
+  },
+  "Rock Throw": {
+    "bp": 50,
+    "type": "Rock",
+    "pp": 15,
+    "accuracy": 90,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Rock Tomb": {
+    "bp": 50,
+    "type": "Rock",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Lower Spd.",
+    "effectChance": 100
+  },
+  "Role Play": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Role Play",
+    "effectChance": 0
+  },
+  "Rolling Kick": {
+    "bp": 60,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Target flinches",
+    "effectChance": 30
+  },
+  "Rollout": {
+    "bp": 30,
+    "type": "Rock",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 90,
+    "effect": "Hit until miss",
+    "effectChance": 0
+  },
+  "Sacred Fire": {
+    "bp": 100,
+    "type": "Fire",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Burn",
+    "effectChance": 50
+  },
+  "Safeguard": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Stop Psn. Moves f. 5 Rounds",
+    "effectChance": 0
+  },
+  "Sand Attack": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ground"
+  },
+  "Sand Tomb": {
+    "bp": 15,
+    "type": "Ground",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "2-5 Hits + Lower Evas.",
+    "effectChance": 100
+  },
+  "Sandstorm": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Rock",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Cause a Sandstorm",
+    "effectChance": 0
+  },
+  "Scary Face": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 3,
+    "accuracy": 100,
+    "effect": "Lower Speed sharply",
+    "effectChance": 0
+  },
+  "Scratch": {
+    "bp": 40,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 35,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Screech": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "pp": 3,
+    "accuracy": 85,
+    "effect": "Lower Defence sharply",
+    "effectChance": 0
+  },
+  "Secret Power": {
+    "bp": 70,
+    "type": "Normal",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Secret Power",
+    "effectChance": 30
+  },
+  "Seismic Toss": {
+    "bp": 0,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Power depends on Lvl.",
+    "effectChance": 0
+  },
+  "Self-Destruct": {
+    "bp": 200,
+    "type": "Normal",
+    "target": "allAdjacent"
+  },
+  "Shadow Ball": {
+    "bp": 80,
+    "type": "Ghost",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 20
+  },
+  "Shadow Punch": {
+    "bp": 60,
+    "type": "Ghost",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 0,
+    "effect": "100% no Type diff.",
+    "effectChance": 0
+  },
+  "Shadow Strike": {
+    "bp": 80,
+    "type": "Ghost",
+    "makesContact": true
+  },
+  "Sharpen": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal"
+  },
+  "Sheer Cold": {
+    "bp": 0,
+    "type": "Ice",
+    "pp": 8,
+    "accuracy": 30,
+    "effect": "1 Hit K.O",
+    "effectChance": 0
+  },
+  "Shock Wave": {
+    "bp": 60,
+    "type": "Electric",
+    "pp": 20,
+    "accuracy": 0,
+    "effect": "100% no Type diff.",
+    "effectChance": 0
+  },
+  "Signal Beam": {
+    "bp": 75,
+    "type": "Bug",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Confuse",
+    "effectChance": 10
+  },
+  "Silver Wind": {
+    "bp": 60,
+    "type": "Bug",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Omniboost",
+    "effectChance": 10
+  },
+  "Sing": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "pp": 32,
+    "accuracy": 70,
+    "effect": "Put to Sleep",
+    "effectChance": 0
+  },
+  "Sketch": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Learn last Move permanently",
+    "effectChance": 0
+  },
+  "Skill Swap": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Skill Swap",
+    "effectChance": 0
+  },
+  "Skull Bash": {
+    "bp": 100,
+    "type": "Normal",
+    "makesContact": true
+  },
+  "Sky Attack": {
+    "bp": 140,
+    "type": "Flying",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "1/3 Recoil",
+    "effectChance": 0
+  },
+  "Sky Uppercut": {
+    "bp": 85,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Sky Uppercut",
+    "effectChance": 0
+  },
+  "Slack Off": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Recover health",
+    "effectChance": 0
+  },
+  "Slam": {
+    "bp": 80,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 75,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Slash": {
+    "bp": 70,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Critical Hit",
+    "effectChance": 0
+  },
+  "Sleep Powder": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 24,
+    "accuracy": 80,
+    "effect": "Put to Sleep",
+    "effectChance": 0
+  },
+  "Sleep Talk": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 0,
+    "effect": "Cause random Move while Slp.",
+    "effectChance": 0
+  },
+  "Sludge": {
+    "bp": 65,
+    "type": "Poison"
+  },
+  "Sludge Bomb": {
+    "bp": 90,
+    "type": "Poison",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Poison",
+    "effectChance": 30
+  },
+  "Smelling Salts": {
+    "bp": 60,
+    "type": "Normal",
+    "makesContact": true
+  },
+  "Smog": {
+    "bp": 20,
+    "type": "Poison",
+    "pp": 20,
+    "accuracy": 70,
+    "effect": "Poison",
+    "effectChance": 40
+  },
+  "Smokescreen": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Lower Acc.",
+    "effectChance": 0
+  },
+  "Snatch": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dark",
+    "priority": 4,
+    "pp": 3,
+    "accuracy": 100,
+    "effect": "Splash... Nothing... -.-",
+    "effectChance": 0
+  },
+  "Snore": {
+    "bp": 40,
+    "type": "Normal",
+    "isSound": true,
+    "pp": 30,
+    "accuracy": 100,
+    "effect": "30% chance of Switch",
+    "effectChance": 30
+  },
+  "Soft-Boiled": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal"
+  },
+  "Solar Beam": {
+    "bp": 120,
+    "type": "Grass"
+  },
+  "Sonic Boom": {
+    "bp": 0,
+    "type": "Normal"
+  },
+  "Spark": {
+    "bp": 65,
+    "type": "Electric",
+    "makesContact": true
+  },
+  "Spider Web": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Bug",
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Prevent escape",
+    "effectChance": 0
+  },
+  "Spike Cannon": {
+    "bp": 20,
+    "type": "Normal",
+    "multihit": [
+      2,
+      5
+    ]
+  },
+  "Spikes": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ground",
+    "pp": 3,
+    "accuracy": 0,
+    "effect": "Cause dmg. on PKMN switch",
+    "effectChance": 0
+  },
+  "Spit Up": {
+    "bp": 0,
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Spite": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Ghost",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Decrease last Moves PP",
+    "effectChance": 0
+  },
+  "Splash": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal"
+  },
+  "Spore": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Put to Sleep",
+    "effectChance": 0
+  },
+  "Steel Wing": {
+    "bp": 70,
+    "type": "Steel",
+    "makesContact": true,
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "+1 Def",
+    "effectChance": 10
+  },
+  "Stockpile": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 0,
+    "effect": "+1 Def +Spdef",
+    "effectChance": 0
+  },
+  "Stomp": {
+    "bp": 65,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Flinch 2x on minimized",
+    "effectChance": 30
+  },
+  "Strength": {
+    "bp": 80,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "String Shot": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Bug",
+    "target": "allAdjacentFoes",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Lower Spd.",
+    "effectChance": 0
+  },
+  "Struggle": {
+    "bp": 50,
+    "type": "Normal",
+    "recoil": [
+      1,
+      4
+    ],
+    "makesContact": true,
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "take 1/4 damage",
+    "effectChance": 0
+  },
+  "Stun Spore": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 30,
+    "accuracy": 75,
+    "effect": "Parlyz",
+    "effectChance": 0
+  },
+  "Submission": {
+    "bp": 80,
+    "type": "Fighting",
+    "recoil": [
+      1,
+      4
+    ],
+    "makesContact": true
+  },
+  "Substitute": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Half HP + create Doll",
+    "effectChance": 0
+  },
+  "Sunny Day": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Fire",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Sunny Day",
+    "effectChance": 0
+  },
+  "Super Fang": {
+    "bp": 0,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Half HP",
+    "effectChance": 0
+  },
+  "Superpower": {
+    "bp": 120,
+    "type": "Fighting",
+    "self": {
+      "boosts": {
+        "atk": -1,
+        "def": -1
+      }
+    },
+    "makesContact": true,
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "1/3 Recoil",
+    "effectChance": 0
+  },
+  "Supersonic": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "isSound": true,
+    "pp": 20,
+    "accuracy": 55,
+    "effect": "Confuse target",
+    "effectChance": 0
+  },
+  "Surf": {
+    "bp": 95,
+    "type": "Water",
+    "target": "allAdjacentFoes",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Swagger": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 15,
+    "accuracy": 90,
+    "effect": "Confuse + Raise Attk. sharply",
+    "effectChance": 100
+  },
+  "Swallow": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Recover health",
+    "effectChance": 0
+  },
+  "Sweet Kiss": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 75,
+    "effect": "Confuse target",
+    "effectChance": 0
+  },
+  "Sweet Scent": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "target": "allAdjacentFoes",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Lower Evas./Attract PKMN",
+    "effectChance": 0
+  },
+  "Swift": {
+    "bp": 60,
+    "type": "Normal",
+    "target": "allAdjacentFoes",
+    "pp": 20,
+    "accuracy": 0,
+    "effect": "100% no Type diff.",
+    "effectChance": 0
+  },
+  "Swords Dance": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 0,
+    "effect": "Raise Attack sharply",
+    "effectChance": 0
+  },
+  "Synthesis": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Grass",
+    "pp": 10,
+    "accuracy": 0,
+    "effect": "Recover health",
+    "effectChance": 0
+  },
+  "Tackle": {
+    "bp": 35,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 35,
+    "accuracy": 95,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Tail Glow": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Bug",
+    "pp": 3,
+    "accuracy": 100,
+    "effect": "Raise Spec. Att. sharply",
+    "effectChance": 0
+  },
+  "Tail Whip": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "target": "allAdjacentFoes",
+    "pp": 1,
+    "accuracy": 100,
+    "effect": "Lower Def.",
+    "effectChance": 0
+  },
+  "Take Down": {
+    "bp": 90,
+    "type": "Normal",
+    "recoil": [
+      1,
+      4
+    ],
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 85,
+    "effect": "take 1/4 damage",
+    "effectChance": 0
+  },
+  "Taunt": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dark",
+    "pp": 3,
+    "accuracy": 100,
+    "effect": "Splash... Nothing... -.-",
+    "effectChance": 0
+  },
+  "Teeter Dance": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "target": "allAdjacent",
+    "pp": 32,
+    "accuracy": 100,
+    "effect": "Confuse target",
+    "effectChance": 0
+  },
+  "Teleport": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic",
+    "pp": 20,
+    "accuracy": 0,
+    "effect": "153",
+    "effectChance": 0
+  },
+  "Thief": {
+    "bp": 40,
+    "type": "Dark",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 100
+  },
+  "Thrash": {
+    "bp": 90,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Attk. 3 turns + confuse",
+    "effectChance": 100
+  },
+  "Thunder": {
+    "bp": 120,
+    "type": "Electric",
+    "pp": 16,
+    "accuracy": 70,
+    "effect": "Thunder",
+    "effectChance": 30
+  },
+  "Thunder Punch": {
+    "bp": 75,
+    "type": "Electric",
+    "makesContact": true
+  },
+  "Thunder Shock": {
+    "bp": 40,
+    "type": "Electric"
+  },
+  "Thunder Wave": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Electric",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Parlyz",
+    "effectChance": 0
+  },
+  "Thunderbolt": {
+    "bp": 95,
+    "type": "Electric",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "Parlyze",
+    "effectChance": 10
+  },
+  "Tickle": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 6,
+    "accuracy": 100,
+    "effect": "1- Def -1 Atk",
+    "effectChance": 0
+  },
+  "Torment": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Dark",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Torment",
+    "effectChance": 0
+  },
+  "Toxic": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Poison",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Poison badly",
+    "effectChance": 100
+  },
+  "Transform": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 32,
+    "accuracy": 0,
+    "effect": "Transf. into Target",
+    "effectChance": 0
+  },
+  "Tri Attack": {
+    "bp": 80,
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Pois./Parl./Frz.",
+    "effectChance": 20
+  },
+  "Trick": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Psychic"
+  },
+  "Triple Kick": {
+    "bp": 10,
+    "type": "Fighting",
+    "multihit": 3,
+    "makesContact": true
+  },
+  "Twineedle": {
+    "bp": 25,
+    "type": "Bug",
+    "multihit": 2,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "2 Hits + Poison",
+    "effectChance": 20
+  },
+  "Twister": {
+    "bp": 40,
+    "type": "Dragon",
+    "target": "allAdjacentFoes",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Double dmg On Flyer Flinch Chance",
+    "effectChance": 20
+  },
+  "Uproar": {
+    "bp": 50,
+    "type": "Normal",
+    "isSound": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Uproar",
+    "effectChance": 100
+  },
+  "Vine Whip": {
+    "bp": 35,
+    "type": "Grass",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Vise Grip": {
+    "bp": 55,
+    "type": "Normal",
+    "makesContact": true
+  },
+  "Vital Throw": {
+    "bp": 70,
+    "type": "Fighting",
+    "makesContact": true,
+    "pp": 10,
+    "accuracy": 100,
+    "effect": "Strike 1st + 100% Hit",
+    "effectChance": 0
+  },
+  "Volt Tackle": {
+    "bp": 120,
+    "type": "Electric",
+    "recoil": [
+      1,
+      3
+    ],
+    "makesContact": true,
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "1/3 Recoil",
+    "effectChance": 30
+  },
+  "Water Gun": {
+    "bp": 40,
+    "type": "Water",
+    "pp": 25,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Water Pulse": {
+    "bp": 60,
+    "type": "Water",
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "Confuse",
+    "effectChance": 20
+  },
+  "Water Sport": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Water",
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Water Sport",
+    "effectChance": 0
+  },
+  "Water Spout": {
+    "bp": 150,
+    "type": "Water",
+    "target": "allAdjacentFoes",
+    "pp": 8,
+    "accuracy": 100,
+    "effect": "take 1/4 damage",
+    "effectChance": 0
+  },
+  "Waterfall": {
+    "bp": 80,
+    "type": "Water",
+    "makesContact": true,
+    "pp": 15,
+    "accuracy": 100,
+    "effect": "Target flinches",
+    "effectChance": 30
+  },
+  "Weather Ball": {
+    "bp": 50,
+    "type": "Normal",
+    "pp": 16,
+    "accuracy": 100,
+    "effect": "Weather Ball",
+    "effectChance": 0
+  },
+  "Weather Ball (Fire)": {
+    "bp": 100,
+    "type": "Fire"
+  },
+  "Weather Ball (Water)": {
+    "bp": 100,
+    "type": "Water"
+  },
+  "Whirlpool": {
+    "bp": 15,
+    "type": "Water",
+    "pp": 24,
+    "accuracy": 100,
+    "effect": "2-5 Hits + Lower Evas.",
+    "effectChance": 100
+  },
+  "Whirlwind": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 5,
+    "accuracy": 100,
+    "effect": "Scare Opp./Switch PKMN",
+    "effectChance": 0
+  },
+  "Will-O-Wisp": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Fire"
+  },
+  "Wing Attack": {
+    "bp": 60,
+    "type": "Flying",
+    "makesContact": true,
+    "pp": 35,
+    "accuracy": 100,
+    "effect": "Normal Hit",
+    "effectChance": 0
+  },
+  "Wish": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 2,
+    "accuracy": 100,
+    "effect": "Wish",
+    "effectChance": 0
+  },
+  "Withdraw": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Water",
+    "pp": 1,
+    "accuracy": 0,
+    "effect": "Raise Def.",
+    "effectChance": 0
+  },
+  "Wrap": {
+    "bp": 15,
+    "type": "Normal",
+    "makesContact": true,
+    "pp": 20,
+    "accuracy": 100,
+    "effect": "2-5 Hits + Lower Evas.",
+    "effectChance": 100
+  },
+  "Yawn": {
+    "bp": 0,
+    "category": "Status",
+    "type": "Normal",
+    "pp": 10,
+    "accuracy": 70,
+    "effect": "Put to Sleep",
+    "effectChance": 0
+  },
+  "Zap Cannon": {
+    "bp": 100,
+    "type": "Electric",
+    "pp": 5,
+    "accuracy": 50,
+    "effect": "Parlyze",
+    "effectChance": 100
+  }
+}

@@ -2,6 +2,24 @@
 
 This repository contains the source code for the Pokémon Nuzlocke Optimizer, a calculator and guide designed to help players optimize their hardcore Pokémon Nuzlocke runs.
 
+## Claude Interaction
+
+### For Project Knowledge (permanent memory):
+
+- Core game mechanics documentation (the AI behavior docs you've shared)
+- Data structure definitions/interfaces once we finalize them
+- Key architectural decisions and their rationales
+- High-level project requirements and goals
+- Important constraints or edge cases we need to handle
+
+### For Per-Chat (temporary context):
+
+- Specific data samples we're currently working with
+- Code snippets we're actively designing/reviewing
+- Implementation details we're discussing
+- Test cases or examples
+- Current issues or questions being addressed
+
 ## Implementation Plan
 
 ### 1. Data Preparation
