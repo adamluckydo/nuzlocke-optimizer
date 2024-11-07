@@ -4,8 +4,8 @@ export const MOVES: {[name: string]: Move} = {
   'Pound': {
     name: 'Pound',
     type: 'Normal',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 35,
     target: 'One Opponent Pokemon',
     flags: {
@@ -15,8 +15,8 @@ export const MOVES: {[name: string]: Move} = {
   'Karate Chop': {
     name: 'Karate Chop',
     type: 'Fighting',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
     flags: {
@@ -27,28 +27,43 @@ export const MOVES: {[name: string]: Move} = {
   'Doubleslap': {
     name: 'Doubleslap',
     type: 'Normal',
-    power: 15,
-    accuracy: 85,
+    bp: 15,
+    acc: .85,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
+      multihit: true,
     },
   },
   'Weather Ball': {
     name: 'Weather Ball',
-    type: 'Water',
-    power: 100,
-    accuracy: 100,
+    type: 'Normal',
+    bp: 50,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+  },
+  'Weather Ball (Fire)': {
+    name: 'Weather Ball',
+    type: 'Fire',
+    bp: 100,
+    acc: 1,
+    pp: 15,
+    target: 'One Opponent Pokemon',
+  },
+  'Weather Ball (Water)': {
+    name: 'Weather Ball',
+    type: 'Water',
+    bp: 100,
+    acc: 1,
+    pp: 15,
+    target: 'One Opponent Pokemon',
   },
   'Mega Punch': {
     name: 'Mega Punch',
     type: 'Normal',
-    power: 80,
-    accuracy: 85,
+    bp: 80,
+    acc: .85,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -58,87 +73,73 @@ export const MOVES: {[name: string]: Move} = {
   'Pay Day': {
     name: 'Pay Day',
     type: 'Normal',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
-    secondary: [{
-      chance: 100,
-      status: 'Earn money'
-    }],
+    other: 'Receive money equal to double the user Pokemon\'s level'
   },
   'Fire Punch': {
     name: 'Fire Punch',
     type: 'Fire',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 10,
-      status: 'Burn'
+      chance: .1,
+      status: 'BRN'
     }],
   },
   'Ice Punch': {
     name: 'Ice Punch',
     type: 'Ice',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 10,
-      status: 'Freeze'
+      chance: .1,
+      status: 'FRZ'
     }],
   },
   'Thunderpunch': {
     name: 'Thunderpunch',
     type: 'Electric',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
+      contact: true,
     },
     secondary: [{
-      chance: 10,
-      status: 'Parlyze'
+      chance: .1,
+      status: 'PAR'
     }],
   },
   'Scratch': {
     name: 'Scratch',
     type: 'Normal',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 35,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
   },
-  'Weather Ball': {
-    name: 'Weather Ball',
-    type: 'Fire',
-    power: 100,
-    accuracy: 100,
-    pp: 15,
-    target: 'One Opponent Pokemon',
-    flags: {
-    },
-  },
   'Guillotine': {
     name: 'Guillotine',
     type: 'Normal',
-    power: 1,
-    accuracy: 30,
+    bp: 1,
+    acc: .3,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
@@ -149,28 +150,32 @@ export const MOVES: {[name: string]: Move} = {
   'Razor Wind': {
     name: 'Razor Wind',
     type: 'Normal',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 10,
     target: 'Both Opponent Pokemon',
     flags: {
+      highCrit: true,
     },
   },
   'Swords Dance': {
     name: 'Swords Dance',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
-    target: 'Your two Pokemon',
-    flags: {
-    },
+    target: 'Your Pokemon',
+    self: {
+      statChanges: {
+        atk: 2
+      }
+    }
   },
   'Cut': {
     name: 'Cut',
     type: 'Normal',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
@@ -180,18 +185,16 @@ export const MOVES: {[name: string]: Move} = {
   'Gust': {
     name: 'Gust',
     type: 'Flying',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 35,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Wing Attack': {
     name: 'Wing Attack',
     type: 'Flying',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 35,
     target: 'One Opponent Pokemon',
     flags: {
@@ -201,44 +204,47 @@ export const MOVES: {[name: string]: Move} = {
   'Whirlwind': {
     name: 'Whirlwind',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    other: "Switches opponent Pokemon out"
   },
   'Fly': {
     name: 'Fly',
     type: 'Flying',
-    power: 70,
-    accuracy: 95,
+    bp: 70,
+    acc: .95,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
+      twoTurn: true,
       contact: true,
     },
   },
   'Bind': {
     name: 'Bind',
     type: 'Normal',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 100,
-      status: '2-5 Hits + Lower Evas.'
+      chance: 1,
+      statChanges: {
+        eva: -1,
+      },
     }],
+    other: 'Deal 1/8 of the opponent\'s health at the end of the turn for 2-5 turns'
   },
   'Slam': {
     name: 'Slam',
     type: 'Normal',
-    power: 80,
-    accuracy: 75,
+    bp: 80,
+    acc: .75,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -248,8 +254,8 @@ export const MOVES: {[name: string]: Move} = {
   'Vine Whip': {
     name: 'Vine Whip',
     type: 'Grass',
-    power: 35,
-    accuracy: 100,
+    bp: 35,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -259,35 +265,36 @@ export const MOVES: {[name: string]: Move} = {
   'Stomp': {
     name: 'Stomp',
     type: 'Normal',
-    power: 65,
-    accuracy: 100,
+    bp: 65,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      status: 'Flinch 2x on minimized'
+      chance: .3,
+      flinch: true,
     }],
+    other: 'Double damage, perfect accuracy, and 2x flinch on minimized'
   },
   'Double Kick': {
     name: 'Double Kick',
     type: 'Fighting',
-    power: 30,
-    accuracy: 100,
+    bp: 30,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
-    multihit: [2, undefined],
+      twoHit: true,
     },
   },
   'Mega Kick': {
     name: 'Mega Kick',
     type: 'Normal',
-    power: 120,
-    accuracy: 75,
+    bp: 120,
+    acc: .75,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
@@ -297,59 +304,58 @@ export const MOVES: {[name: string]: Move} = {
   'Jump Kick': {
     name: 'Jump Kick',
     type: 'Fighting',
-    power: 70,
-    accuracy: 95,
+    bp: 70,
+    acc: .95,
     pp: 25,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
+    other: 'If attack misses, user loses 1/2 of max HP'
   },
   'Rolling Kick': {
     name: 'Rolling Kick',
     type: 'Fighting',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      status: 'Target flinches'
+      chance: .3,
+      flinch: true
     }],
   },
   'Sand-attack': {
     name: 'Sand-attack',
     type: 'Ground',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Headbutt': {
     name: 'Headbutt',
     type: 'Normal',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      status: 'Target flinches'
+      chance: .3,
+      flinch: true,
     }],
   },
   'Horn Attack': {
     name: 'Horn Attack',
     type: 'Normal',
-    power: 65,
-    accuracy: 100,
+    bp: 65,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
     flags: {
@@ -359,30 +365,32 @@ export const MOVES: {[name: string]: Move} = {
   'Fury Attack': {
     name: 'Fury Attack',
     type: 'Normal',
-    power: 15,
-    accuracy: 85,
+    bp: 15,
+    acc: .85,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
-    multihit: [2,5, 5],
+      multihit: true,
     },
   },
   'Drill Run': {
     name: 'Drill Run',
     type: 'Ground',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
-    },
+      contact: true,
+      highCrit: true,
+    }
   },
   'Tackle': {
     name: 'Tackle',
     type: 'Normal',
-    power: 35,
-    accuracy: 95,
+    bp: 35,
+    acc: .95,
     pp: 35,
     target: 'One Opponent Pokemon',
     flags: {
@@ -392,377 +400,382 @@ export const MOVES: {[name: string]: Move} = {
   'Body Slam': {
     name: 'Body Slam',
     type: 'Normal',
-    power: 85,
-    accuracy: 100,
+    bp: 85,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      status: 'Parlyze'
+      chance: .3,
+      status: 'PAR'
     }],
   },
   'Wrap': {
     name: 'Wrap',
     type: 'Normal',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 100,
-      status: '2-5 Hits + Lower Evas.'
+      chance: 1,
+      statChanges: {
+        eva: -1,
+      },
     }],
+    other: 'Deal 1/8 of the opponent\'s health at the end of the turn for 2-5 turns'
   },
   'Take Down': {
     name: 'Take Down',
     type: 'Normal',
-    power: 90,
-    accuracy: 85,
+    bp: 90,
+    acc: .85,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
-    recoil: [1, 4],
+      recoil: .25,
     },
   },
   'Thrash': {
     name: 'Thrash',
     type: 'Normal',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 20,
     target: 'Opponent [???]',
     flags: {
       contact: true,
     },
-    secondary: [{
-      chance: 100,
-      status: 'Attk. 3 turns + confuse'
-    }],
+    other: 'Attack for 3 turns, then become confused'
   },
   'Double-edge': {
     name: 'Double-edge',
     type: 'Normal',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
+      contact: true,
+      recoil: 1/3,
     },
   },
   'Tail Whip': {
     name: 'Tail Whip',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 1,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        def: -1,
+      },
+    }]
   },
   'Poison Sting': {
     name: 'Poison Sting',
     type: 'Poison',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 35,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 30,
-      status: 'Poison'
+      chance: .3,
+      status: 'PSN',
     }],
   },
   'Twineedle': {
     name: 'Twineedle',
     type: 'Bug',
-    power: 25,
-    accuracy: 100,
+    bp: 25,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
-    multihit: [2, undefined],
+      twoHit: true,
     },
     secondary: [{
-      chance: 20,
-      status: '2 Hits + Poison'
+      chance: .2,
+      status: 'PSN',
     }],
   },
   'Pin Missile': {
     name: 'Pin Missile',
     type: 'Bug',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
-    multihit: [2,5, 5],
+      multihit: true,
     },
   },
   'Leer': {
     name: 'Leer',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 1,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        def: -1,
+      },
+    }]
   },
   'Bite': {
     name: 'Bite',
     type: 'Dark',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      status: 'Target flinches'
+      chance: .3,
+      flinch: true,
     }],
   },
   'Growl': {
     name: 'Growl',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 1,
     target: 'Both Opponent Pokemon',
     flags: {
       sound: true,
     },
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        atk: -1,
+      },
+    }]
   },
   'Roar': {
     name: 'Roar',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
       sound: true,
     },
+    other: 'Switches opponent Pokemon out'
   },
   'Sing': {
     name: 'Sing',
     type: 'Normal',
-    power: 0,
-    accuracy: 70,
+    bp: 0,
+    acc: .7,
     pp: 32,
     target: 'One Opponent Pokemon',
     flags: {
       sound: true,
     },
+    secondary: [{
+      chance: .2,
+      status: 'SLP',
+    }],
   },
   'Supersonic': {
     name: 'Supersonic',
     type: 'Normal',
-    power: 0,
-    accuracy: 55,
+    bp: 0,
+    acc: .55,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       sound: true,
     },
+    secondary: [{
+      chance: 1,
+      confuse: true,
+    }]
   },
   'Sonicboom': {
     name: 'Sonicboom',
     type: 'Normal',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       directDamage: true,
     },
+    other: 'Deals 20 damage'
   },
   'Disable': {
     name: 'Disable',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    other: 'Disable opponent\'s last used move',
   },
   'Acid': {
     name: 'Acid',
     type: 'Poison',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 30,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Lower Def.'
-    }],
+      chance: 1,
+      statChanges: {
+        def: -1,
+      },
+    }]
   },
   'Ember': {
     name: 'Ember',
     type: 'Fire',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Burn'
+      chance: .1,
+      status: 'BRN',
     }],
   },
   'Flamethrower': {
     name: 'Flamethrower',
     type: 'Fire',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Burn'
+      chance: .1,
+      status: 'BRN',
     }],
   },
   'Mist': {
     name: 'Mist',
     type: 'Ice',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
+    other: 'Prevents statuses from being lowered for 5 turns'
   },
   'Water Gun': {
     name: 'Water Gun',
     type: 'Water',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hydro Pump': {
     name: 'Hydro Pump',
     type: 'Water',
-    power: 120,
-    accuracy: 85,
+    bp: 120,
+    acc: .85,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Surf': {
     name: 'Surf',
     type: 'Water',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 24,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
   },
   'Ice Beam': {
     name: 'Ice Beam',
     type: 'Ice',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Freeze'
+      chance: .1,
+      status: 'FRZ',
     }],
   },
   'Blizzard': {
     name: 'Blizzard',
     type: 'Ice',
-    power: 120,
-    accuracy: 70,
+    bp: 120,
+    acc: .7,
     pp: 8,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Freeze'
+      chance: .1,
+      status: 'FRZ',
     }],
   },
   'Psybeam': {
     name: 'Psybeam',
     type: 'Psychic',
-    power: 65,
-    accuracy: 100,
+    bp: 65,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Confuse'
+      chance: .1,
+      confuse: true,
     }],
   },
   'Bubblebeam': {
     name: 'Bubblebeam',
     type: 'Water',
-    power: 65,
-    accuracy: 100,
+    bp: 65,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Lower Spd.'
+      chance: .1,
+      statChanges: {
+        spd: -1,
+      }
     }],
   },
   'Aurora Beam': {
     name: 'Aurora Beam',
     type: 'Ice',
-    power: 65,
-    accuracy: 100,
+    bp: 65,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 10,
-      status: 'Lower Attk.'
+      chance: .1,
+      statChanges: {
+        atk: -1,
+      }
     }],
   },
   'Hyper Beam': {
     name: 'Hyper Beam',
     type: 'Normal',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    other: 'Pokemon must recharge after using'
   },
   'Peck': {
     name: 'Peck',
     type: 'Flying',
-    power: 35,
-    accuracy: 100,
+    bp: 35,
+    acc: 1,
     pp: 35,
     target: 'One Opponent Pokemon',
     flags: {
@@ -772,64 +785,67 @@ export const MOVES: {[name: string]: Move} = {
   'Drill Peck': {
     name: 'Drill Peck',
     type: 'Flying',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
+      highCrit: true,
     },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Psychic',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Low Kick': {
     name: 'Low Kick',
     type: 'Fighting',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
+    other: 'Deals damage according to opponent weight. Can also hit Diving opponents.' // https://pokemondb.net/move/low-kick
   },
   'Counter': {
     name: 'Counter',
     type: 'Fighting',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 32,
     target: 'Your Pokemon',
+    priority: -1,
     flags: {
       contact: true,
       directDamage: true,
     },
+    other: 'After being hit by a physical attack, deals 2X damage to opponent who attacked'
   },
   'Seismic Toss': {
     name: 'Seismic Toss',
     type: 'Fighting',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
       directDamage: true,
     },
+    other: 'Deals damage equal to user\'s level'
   },
   'Strength': {
     name: 'Strength',
     type: 'Normal',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
@@ -839,125 +855,136 @@ export const MOVES: {[name: string]: Move} = {
   'Absorb': {
     name: 'Absorb',
     type: 'Grass',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
-    drain: [1, 2],
+      drain: .5
     },
   },
   'Mega Drain': {
     name: 'Mega Drain',
     type: 'Grass',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
-    drain: [1, 2],
+      drain: .5
     },
   },
   'Leech Seed': {
     name: 'Leech Seed',
     type: 'Grass',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    other: 'Drains 1/8 of the opponent\'s health at the end of each turn'
   },
   'Growth': {
     name: 'Growth',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
-    target: 'Your two Pokemon',
-    flags: {
-    },
+    target: 'Your Pokemon',
+    self: {
+      statChanges: {
+        spAtk: 1,
+      },
+    }
   },
   'Razor Leaf': {
     name: 'Razor Leaf',
     type: 'Grass',
-    power: 55,
-    accuracy: 95,
+    bp: 55,
+    acc: .95,
     pp: 25,
     target: 'Both Opponent Pokemon',
     flags: {
-    },
+      highCrit: true,
+    }
   },
   'Solarbeam': {
     name: 'Solarbeam',
     type: 'Grass',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
+      twoTurn: true,
     },
+    other: 'Fires in one turn if there is sun'
   },
   'Poisonpowder': {
     name: 'Poisonpowder',
     type: 'Poison',
-    power: 0,
-    accuracy: 75,
+    bp: 0,
+    acc: .75,
     pp: 35,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    secondary: [{
+      chance: 1,
+      status: 'PSN'
+    }]
   },
   'Stun Spore': {
     name: 'Stun Spore',
     type: 'Grass',
-    power: 0,
-    accuracy: 75,
+    bp: 0,
+    acc: .75,
     pp: 30,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    secondary: [{
+      chance: 1,
+      status: 'PAR'
+    }]
   },
   'Sleep Powder': {
     name: 'Sleep Powder',
     type: 'Grass',
-    power: 0,
-    accuracy: 80,
+    bp: 0,
+    acc: .8,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
+    secondary: [{
+      chance: 1,
+      status: 'SLP'
+    }]
   },
   'Petal Dance': {
     name: 'Petal Dance',
     type: 'Grass',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 10,
-      status: 'Lower Spec. Def.'
-    }],
+      chance: .1,
+      statChanges: {
+        spDef: -1
+      }
+    }]
   },
   'String Shot': {
     name: 'String Shot',
     type: 'Bug',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
   },
   'Dragon Rage': {
     name: 'Dragon Rage',
     type: 'Dragon',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -967,108 +994,92 @@ export const MOVES: {[name: string]: Move} = {
   'Fire Spin': {
     name: 'Fire Spin',
     type: 'Fire',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: '2-5 Hits + Lower Evas.'
+      chance: 1,
+      alt: '2-5 Hits + Lower Evas.'
     }],
   },
   'Thundershock': {
     name: 'Thundershock',
     type: 'Electric',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Parlyze'
+      alt: 'Parlyze'
     }],
   },
   'Thunderbolt': {
     name: 'Thunderbolt',
     type: 'Electric',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Parlyze'
+      alt: 'Parlyze'
     }],
   },
   'Thunder Wave': {
     name: 'Thunder Wave',
     type: 'Electric',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Thunder': {
     name: 'Thunder',
     type: 'Electric',
-    power: 120,
-    accuracy: 70,
+    bp: 120,
+    acc: .7,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Thunder'
+      alt: 'Thunder'
     }],
   },
   'Rock Throw': {
     name: 'Rock Throw',
     type: 'Rock',
-    power: 50,
-    accuracy: 90,
+    bp: 50,
+    acc: .9,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Earthquake': {
     name: 'Earthquake',
     type: 'Ground',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 16,
     target: 'All',
-    flags: {
-    },
   },
   'Earth Power': {
     name: 'Earth Power',
     type: 'Ground',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Dig': {
     name: 'Dig',
     type: 'Ground',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1078,80 +1089,68 @@ export const MOVES: {[name: string]: Move} = {
   'Toxic': {
     name: 'Toxic',
     type: 'Poison',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Poison badly'
+      chance: 1,
+      alt: 'Poison badly'
     }],
   },
   'Confusion': {
     name: 'Confusion',
     type: 'Psychic',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Confuse'
+      alt: 'Confuse'
     }],
   },
   'Psychic': {
     name: 'Psychic',
     type: 'Psychic',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Lower Spec. Def.'
+      alt: 'Lower Spec. Def.'
     }],
   },
   'Hypnosis': {
     name: 'Hypnosis',
     type: 'Psychic',
-    power: 0,
-    accuracy: 70,
+    bp: 0,
+    acc: .7,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Meditate': {
     name: 'Meditate',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Agility': {
     name: 'Agility',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Quick Attack': {
     name: 'Quick Attack',
     type: 'Normal',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1161,8 +1160,8 @@ export const MOVES: {[name: string]: Move} = {
   'Rage': {
     name: 'Rage',
     type: 'Normal',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1172,18 +1171,16 @@ export const MOVES: {[name: string]: Move} = {
   'Teleport': {
     name: 'Teleport',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 20,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Night Shade': {
     name: 'Night Shade',
     type: 'Ghost',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1193,18 +1190,16 @@ export const MOVES: {[name: string]: Move} = {
   'Mimic': {
     name: 'Mimic',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Screech': {
     name: 'Screech',
     type: 'Normal',
-    power: 0,
-    accuracy: 85,
+    bp: 0,
+    acc: .85,
     pp: 3,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1214,138 +1209,112 @@ export const MOVES: {[name: string]: Move} = {
   'Double Team': {
     name: 'Double Team',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 6,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Recover': {
     name: 'Recover',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Harden': {
     name: 'Harden',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Minimize': {
     name: 'Minimize',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 6,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Smokescreen': {
     name: 'Smokescreen',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Confuse Ray': {
     name: 'Confuse Ray',
     type: 'Ghost',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Withdraw': {
     name: 'Withdraw',
     type: 'Water',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Defense Curl': {
     name: 'Defense Curl',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Barrier': {
     name: 'Barrier',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Light Screen': {
     name: 'Light Screen',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Haze': {
     name: 'Haze',
     type: 'Ice',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Reflect': {
     name: 'Reflect',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Focus Energy': {
     name: 'Focus Energy',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Bide': {
     name: 'Bide',
     type: 'Normal',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 10,
     target: 'Your two Pokemon',
     flags: {
@@ -1356,48 +1325,40 @@ export const MOVES: {[name: string]: Move} = {
   'Metronome': {
     name: 'Metronome',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 35,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Mirror Move': {
     name: 'Mirror Move',
     type: 'Flying',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 20,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Selfdestruct': {
     name: 'Selfdestruct',
     type: 'Normal',
-    power: 200,
-    accuracy: 100,
+    bp: 200,
+    acc: 1,
     pp: 1,
     target: 'All',
-    flags: {
-    },
   },
   'Egg Bomb': {
     name: 'Egg Bomb',
     type: 'Grass',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Lick': {
     name: 'Lick',
     type: 'Ghost',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1405,70 +1366,62 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Parlyze'
+      alt: 'Parlyze'
     }],
   },
   'Smog': {
     name: 'Smog',
     type: 'Poison',
-    power: 20,
-    accuracy: 70,
+    bp: 20,
+    acc: .7,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 40,
-      status: 'Poison'
+      alt: 'Poison'
     }],
   },
   'Sludge Bomb': {
     name: 'Sludge Bomb',
     type: 'Poison',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Poison'
+      alt: 'Poison'
     }],
   },
   'Bone Club': {
     name: 'Bone Club',
     type: 'Ground',
-    power: 65,
-    accuracy: 85,
+    bp: 65,
+    acc: .85,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Target flinches'
+      alt: 'Target flinches'
     }],
   },
   'Fire Blast': {
     name: 'Fire Blast',
     type: 'Fire',
-    power: 120,
-    accuracy: 85,
+    bp: 120,
+    acc: .85,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Burn'
+      alt: 'Burn'
     }],
   },
   'Waterfall': {
     name: 'Waterfall',
     type: 'Water',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1476,119 +1429,101 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Target flinches'
+      alt: 'Target flinches'
     }],
   },
   'Clamp': {
     name: 'Clamp',
     type: 'Water',
-    power: 35,
-    accuracy: 100,
+    bp: 35,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 100,
-      status: '2-5 Hits + Lower Evas.'
+      chance: 1,
+      alt: '2-5 Hits + Lower Evas.'
     }],
   },
   'Swift': {
     name: 'Swift',
     type: 'Normal',
-    power: 60,
-    accuracy: 0,
+    bp: 60,
+    acc: 0,
     pp: 20,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
   },
   'Head Smash': {
     name: 'Head Smash',
     type: 'Rock',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Fire',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Grass',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Amnesia': {
     name: 'Amnesia',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Kinesis': {
     name: 'Kinesis',
     type: 'Psychic',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 6,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Softboiled': {
     name: 'Softboiled',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 16,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Hi Jump Kick': {
     name: 'Hi Jump Kick',
     type: 'Fighting',
-    power: 85,
-    accuracy: 90,
+    bp: 85,
+    acc: .9,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Glare': {
     name: 'Glare',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Dream Eater': {
     name: 'Dream Eater',
     type: 'Psychic',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1598,28 +1533,24 @@ export const MOVES: {[name: string]: Move} = {
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Ice',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Ghost',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Leech Life': {
     name: 'Leech Life',
     type: 'Bug',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1630,52 +1561,44 @@ export const MOVES: {[name: string]: Move} = {
   'Lovely Kiss': {
     name: 'Lovely Kiss',
     type: 'Normal',
-    power: 0,
-    accuracy: 85,
+    bp: 0,
+    acc: .85,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Sky Attack': {
     name: 'Sky Attack',
     type: 'Flying',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Transform': {
     name: 'Transform',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 32,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Bubble': {
     name: 'Bubble',
     type: 'Water',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 30,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Lower Spd.'
+      alt: 'Lower Spd.'
     }],
   },
   'Dizzy Punch': {
     name: 'Dizzy Punch',
     type: 'Normal',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1683,34 +1606,30 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Confuse'
+      alt: 'Confuse'
     }],
   },
   'Spore': {
     name: 'Spore',
     type: 'Grass',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Flash': {
     name: 'Flash',
     type: 'Normal',
-    power: 0,
-    accuracy: 70,
+    bp: 0,
+    acc: .7,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Psywave': {
     name: 'Psywave',
     type: 'Psychic',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1720,28 +1639,24 @@ export const MOVES: {[name: string]: Move} = {
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Water',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Acid Armor': {
     name: 'Acid Armor',
     type: 'Poison',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Crabhammer': {
     name: 'Crabhammer',
     type: 'Water',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1751,18 +1666,16 @@ export const MOVES: {[name: string]: Move} = {
   'Explosion': {
     name: 'Explosion',
     type: 'Normal',
-    power: 250,
-    accuracy: 100,
+    bp: 250,
+    acc: 1,
     pp: 1,
     target: 'All',
-    flags: {
-    },
   },
   'Fury Swipes': {
     name: 'Fury Swipes',
     type: 'Normal',
-    power: 18,
-    accuracy: 80,
+    bp: 18,
+    acc: .8,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1773,8 +1686,8 @@ export const MOVES: {[name: string]: Move} = {
   'Bonemerang': {
     name: 'Bonemerang',
     type: 'Ground',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1784,32 +1697,28 @@ export const MOVES: {[name: string]: Move} = {
   'Rest': {
     name: 'Rest',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Rock Slide': {
     name: 'Rock Slide',
     type: 'Rock',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 16,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Target flinches'
+      alt: 'Target flinches'
     }],
   },
   'Hyper Fang': {
     name: 'Hyper Fang',
     type: 'Normal',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1817,48 +1726,42 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 10,
-      status: 'Target flinches'
+      alt: 'Target flinches'
     }],
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Dark',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Conversion': {
     name: 'Conversion',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 30,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Tri Attack': {
     name: 'Tri Attack',
     type: 'Normal',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 20,
-      status: 'Pois./Parl./Frz.'
+      alt: 'Pois./Parl./Frz.'
     }],
   },
   'Super Fang': {
     name: 'Super Fang',
     type: 'Dark',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1869,8 +1772,8 @@ export const MOVES: {[name: string]: Move} = {
   'Slash': {
     name: 'Slash',
     type: 'Normal',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1880,18 +1783,16 @@ export const MOVES: {[name: string]: Move} = {
   'Substitute': {
     name: 'Substitute',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Struggle': {
     name: 'Struggle',
     type: 'Normal',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 1,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1902,73 +1803,63 @@ export const MOVES: {[name: string]: Move} = {
   'Sketch': {
     name: 'Sketch',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Rock',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Thief': {
     name: 'Thief',
     type: 'Dark',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 100,
-      status: 'Normal Hit'
+      chance: 1,
+      alt: 'Normal Hit'
     }],
   },
   'Spider Web': {
     name: 'Spider Web',
     type: 'Bug',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Mind Reader': {
     name: 'Mind Reader',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Nightmare': {
     name: 'Nightmare',
     type: 'Ghost',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Flame Wheel': {
     name: 'Flame Wheel',
     type: 'Fire',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1976,14 +1867,14 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 10,
-      status: 'Burn'
+      alt: 'Burn'
     }],
   },
   'Snore': {
     name: 'Snore',
     type: 'Normal',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
@@ -1991,24 +1882,22 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: '30% chance of Switch'
+      alt: '30% chance of Switch'
     }],
   },
   'Curse': {
     name: 'Curse',
     type: 'Unknown',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 6,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Flail': {
     name: 'Flail',
     type: 'Normal',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2018,38 +1907,32 @@ export const MOVES: {[name: string]: Move} = {
   'Conversion 2': {
     name: 'Conversion 2',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 30,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Aeroblast': {
     name: 'Aeroblast',
     type: 'Flying',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Electric',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Reversal': {
     name: 'Reversal',
     type: 'Fighting',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2059,42 +1942,36 @@ export const MOVES: {[name: string]: Move} = {
   'Spite': {
     name: 'Spite',
     type: 'Ghost',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Powder Snow': {
     name: 'Powder Snow',
     type: 'Ice',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 25,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Freeze'
+      alt: 'Freeze'
     }],
   },
   'Protect': {
     name: 'Protect',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Mach Punch': {
     name: 'Mach Punch',
     type: 'Fighting',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2104,134 +1981,112 @@ export const MOVES: {[name: string]: Move} = {
   'Scary Face': {
     name: 'Scary Face',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Faint Attack': {
     name: 'Faint Attack',
     type: 'Dark',
-    power: 60,
-    accuracy: 0,
+    bp: 60,
+    acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Sweet Kiss': {
     name: 'Sweet Kiss',
     type: 'Normal',
-    power: 0,
-    accuracy: 75,
+    bp: 0,
+    acc: .75,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Belly Drum': {
     name: 'Belly Drum',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Gunk Shot': {
     name: 'Gunk Shot',
     type: 'Poison',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Poison'
+      alt: 'Poison'
     }],
   },
   'Mud-slap': {
     name: 'Mud-slap',
     type: 'Ground',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Lower Acc.'
+      chance: 1,
+      alt: 'Lower Acc.'
     }],
   },
   'Octazooka': {
     name: 'Octazooka',
     type: 'Water',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 50,
-      status: 'Lower Acc.'
+      alt: 'Lower Acc.'
     }],
   },
   'Spikes': {
     name: 'Spikes',
     type: 'Ground',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your sent out Pokemon',
-    flags: {
-    },
   },
   'Zap Cannon': {
     name: 'Zap Cannon',
     type: 'Electric',
-    power: 100,
-    accuracy: 50,
+    bp: 100,
+    acc: .5,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Parlyze'
+      chance: 1,
+      alt: 'Parlyze'
     }],
   },
   'Foresight': {
     name: 'Foresight',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Destiny Bond': {
     name: 'Destiny Bond',
     type: 'Ghost',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Perish Song': {
     name: 'Perish Song',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
     flags: {
@@ -2241,32 +2096,28 @@ export const MOVES: {[name: string]: Move} = {
   'Icy Wind': {
     name: 'Icy Wind',
     type: 'Ice',
-    power: 55,
-    accuracy: 100,
+    bp: 55,
+    acc: 1,
     pp: 24,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Lower Spd.'
+      chance: 1,
+      alt: 'Lower Spd.'
     }],
   },
   'Detect': {
     name: 'Detect',
     type: 'Fighting',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Bone Rush': {
     name: 'Bone Rush',
     type: 'Ground',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2276,38 +2127,32 @@ export const MOVES: {[name: string]: Move} = {
   'Lock-on': {
     name: 'Lock-on',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Ground',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Sandstorm': {
     name: 'Sandstorm',
     type: 'Rock',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Giga Drain': {
     name: 'Giga Drain',
     type: 'Grass',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2317,28 +2162,24 @@ export const MOVES: {[name: string]: Move} = {
   'Endure': {
     name: 'Endure',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Charm': {
     name: 'Charm',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Rollout': {
     name: 'Rollout',
     type: 'Rock',
-    power: 30,
-    accuracy: 90,
+    bp: 30,
+    acc: .9,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2348,8 +2189,8 @@ export const MOVES: {[name: string]: Move} = {
   'False Swipe': {
     name: 'False Swipe',
     type: 'Normal',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 40,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2359,56 +2200,48 @@ export const MOVES: {[name: string]: Move} = {
   'Swagger': {
     name: 'Swagger',
     type: 'Normal',
-    power: 0,
-    accuracy: 90,
+    bp: 0,
+    acc: .9,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Confuse + Raise Attk. sharply'
+      chance: 1,
+      alt: 'Confuse + Raise Attk. sharply'
     }],
   },
   'Milk Drink': {
     name: 'Milk Drink',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Wild Charge': {
     name: 'Wild Charge',
     type: 'Electric',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: '1/3 Recoil'
+      alt: '1/3 Recoil'
     }],
   },
   'X-scissors': {
     name: 'X-scissors',
     type: 'Bug',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Steel Wing': {
     name: 'Steel Wing',
     type: 'Steel',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2416,44 +2249,38 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 10,
-      status: '+1 Def'
+      alt: '+1 Def'
     }],
   },
   'Mean Look': {
     name: 'Mean Look',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Attract': {
     name: 'Attract',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Sleep Talk': {
     name: 'Sleep Talk',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 16,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Heal Bell': {
     name: 'Heal Bell',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 2,
     target: 'Your two Pokemon',
     flags: {
@@ -2463,8 +2290,8 @@ export const MOVES: {[name: string]: Move} = {
   'Return': {
     name: 'Return',
     type: 'Normal',
-    power: 103,
-    accuracy: 100,
+    bp: 103,
+    acc: 1,
     pp: 32,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2474,18 +2301,16 @@ export const MOVES: {[name: string]: Move} = {
   'Present': {
     name: 'Present',
     type: 'Normal',
-    power: 1,
-    accuracy: 90,
+    bp: 1,
+    acc: .9,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Frustration': {
     name: 'Frustration',
     type: 'Normal',
-    power: 103,
-    accuracy: 100,
+    bp: 103,
+    acc: 1,
     pp: 32,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2495,66 +2320,56 @@ export const MOVES: {[name: string]: Move} = {
   'Safeguard': {
     name: 'Safeguard',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Pain Split': {
     name: 'Pain Split',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Sacred Fire': {
     name: 'Sacred Fire',
     type: 'Fire',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 50,
-      status: 'Burn'
+      alt: 'Burn'
     }],
   },
   'Magnitude': {
     name: 'Magnitude',
     type: 'Ground',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 30,
     target: 'All',
-    flags: {
-    },
   },
   'Dynamicpunch': {
     name: 'Dynamicpunch',
     type: 'Fighting',
-    power: 100,
-    accuracy: 50,
+    bp: 100,
+    acc: .5,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Confuse'
+      chance: 1,
+      alt: 'Confuse'
     }],
   },
   'Megahorn': {
     name: 'Megahorn',
     type: 'Bug',
-    power: 120,
-    accuracy: 90,
+    bp: 120,
+    acc: .9,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2564,42 +2379,36 @@ export const MOVES: {[name: string]: Move} = {
   'Dragonbreath': {
     name: 'Dragonbreath',
     type: 'Dragon',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Parlyze'
+      alt: 'Parlyze'
     }],
   },
   'Baton Pass': {
     name: 'Baton Pass',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 40,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Encore': {
     name: 'Encore',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Pursuit': {
     name: 'Pursuit',
     type: 'Dark',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2609,8 +2418,8 @@ export const MOVES: {[name: string]: Move} = {
   'Rapid Spin': {
     name: 'Rapid Spin',
     type: 'Normal',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 1,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2620,18 +2429,16 @@ export const MOVES: {[name: string]: Move} = {
   'Sweet Scent': {
     name: 'Sweet Scent',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
   },
   'Iron Tail': {
     name: 'Iron Tail',
     type: 'Steel',
-    power: 100,
-    accuracy: 90,
+    bp: 100,
+    acc: .9,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2639,14 +2446,14 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Metal Claw': {
     name: 'Metal Claw',
     type: 'Steel',
-    power: 50,
-    accuracy: 95,
+    bp: 50,
+    acc: .95,
     pp: 35,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2654,14 +2461,14 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 10,
-      status: 'Raise Own Attk.'
+      alt: 'Raise Own Attk.'
     }],
   },
   'Vital Throw': {
     name: 'Vital Throw',
     type: 'Fighting',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2671,48 +2478,40 @@ export const MOVES: {[name: string]: Move} = {
   'Morning Sun': {
     name: 'Morning Sun',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Synthesis': {
     name: 'Synthesis',
     type: 'Grass',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Moonlight': {
     name: 'Moonlight',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Normal',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Cross Chop': {
     name: 'Cross Chop',
     type: 'Fighting',
-    power: 100,
-    accuracy: 90,
+    bp: 100,
+    acc: .9,
     pp: 8,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2722,42 +2521,36 @@ export const MOVES: {[name: string]: Move} = {
   'Twister': {
     name: 'Twister',
     type: 'Dragon',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 20,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 20,
-      status: 'Double dmg On Flyer Flinch Chance'
+      alt: 'Double dmg On Flyer Flinch Chance'
     }],
   },
   'Rain Dance': {
     name: 'Rain Dance',
     type: 'Water',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Sunny Day': {
     name: 'Sunny Day',
     type: 'Fire',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Crunch': {
     name: 'Crunch',
     type: 'Dark',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2765,14 +2558,14 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 20,
-      status: 'Lower Spec. Def.'
+      alt: 'Lower Spec. Def.'
     }],
   },
   'Mirror Coat': {
     name: 'Mirror Coat',
     type: 'Psychic',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 32,
     target: 'Your Pokemon',
     flags: {
@@ -2782,66 +2575,56 @@ export const MOVES: {[name: string]: Move} = {
   'Psych Up': {
     name: 'Psych Up',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Extremespeed': {
     name: 'Extremespeed',
     type: 'Normal',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Ancientpower': {
     name: 'Ancientpower',
     type: 'Rock',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Omniboost'
+      alt: 'Omniboost'
     }],
   },
   'Shadow Ball': {
     name: 'Shadow Ball',
     type: 'Ghost',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 20,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Fighting',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Rock Smash': {
     name: 'Rock Smash',
     type: 'Fighting',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -2849,157 +2632,133 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 50,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Whirlpool': {
     name: 'Whirlpool',
     type: 'Water',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: '2-5 Hits + Lower Evas.'
+      chance: 1,
+      alt: '2-5 Hits + Lower Evas.'
     }],
   },
   'Beat Up': {
     name: 'Beat Up',
     type: 'Dark',
-    power: 10,
-    accuracy: 100,
+    bp: 10,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Fake Out': {
     name: 'Fake Out',
     type: 'Normal',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Uproar': {
     name: 'Uproar',
     type: 'Normal',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 10,
     target: 'Opponent [???]',
     flags: {
       sound: true,
     },
     secondary: [{
-      chance: 100,
-      status: 'Uproar'
+      chance: 1,
+      alt: 'Uproar'
     }],
   },
   'Stockpile': {
     name: 'Stockpile',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 16,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Spit Up': {
     name: 'Spit Up',
     type: 'Normal',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Swallow': {
     name: 'Swallow',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Heat Wave': {
     name: 'Heat Wave',
     type: 'Fire',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 16,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 20,
-      status: 'Burn'
+      alt: 'Burn'
     }],
   },
   'Hail': {
     name: 'Hail',
     type: 'Ice',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Torment': {
     name: 'Torment',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Flatter': {
     name: 'Flatter',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Will-o-wisp': {
     name: 'Will-o-wisp',
     type: 'Fire',
-    power: 0,
-    accuracy: 85,
+    bp: 0,
+    acc: .85,
     pp: 15,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Memento': {
     name: 'Memento',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 1,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Facade': {
     name: 'Facade',
     type: 'Normal',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 32,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3009,8 +2768,8 @@ export const MOVES: {[name: string]: Move} = {
   'Focus Punch': {
     name: 'Focus Punch',
     type: 'Fighting',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3020,118 +2779,96 @@ export const MOVES: {[name: string]: Move} = {
   'Smellingsalt': {
     name: 'Smellingsalt',
     type: 'Normal',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Follow Me': {
     name: 'Follow Me',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 20,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Nature Power': {
     name: 'Nature Power',
     type: 'Normal',
-    power: 0,
-    accuracy: 95,
+    bp: 0,
+    acc: .95,
     pp: 20,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Charge': {
     name: 'Charge',
     type: 'Electric',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 20,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Taunt': {
     name: 'Taunt',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Helping Hand': {
     name: 'Helping Hand',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 20,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Flying',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Role Play': {
     name: 'Role Play',
     type: 'Psychic',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Wish': {
     name: 'Wish',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 2,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Assist': {
     name: 'Assist',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 32,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Ingrain': {
     name: 'Ingrain',
     type: 'Grass',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 1,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Superpower': {
     name: 'Superpower',
     type: 'Fighting',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3141,28 +2878,24 @@ export const MOVES: {[name: string]: Move} = {
   'Magic Coat': {
     name: 'Magic Coat',
     type: 'Psychic',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 15,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Recycle': {
     name: 'Recycle',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 16,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Revenge': {
     name: 'Revenge',
     type: 'Fighting',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3172,8 +2905,8 @@ export const MOVES: {[name: string]: Move} = {
   'Brick Break': {
     name: 'Brick Break',
     type: 'Fighting',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3183,33 +2916,31 @@ export const MOVES: {[name: string]: Move} = {
   'Yawn': {
     name: 'Yawn',
     type: 'Normal',
-    power: 0,
-    accuracy: 70,
+    bp: 0,
+    acc: .7,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Knock Off': {
     name: 'Knock Off',
     type: 'Dark',
-    power: 20,
-    accuracy: 100,
+    bp: 20,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
     },
     secondary: [{
-      chance: 100,
-      status: 'Knock Off'
+      chance: 1,
+      alt: 'Knock Off'
     }],
   },
   'Endeavor': {
     name: 'Endeavor',
     type: 'Normal',
-    power: 1,
-    accuracy: 100,
+    bp: 1,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3220,82 +2951,68 @@ export const MOVES: {[name: string]: Move} = {
   'Draco Meteor': {
     name: 'Draco Meteor',
     type: 'Dragon',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Skill Swap': {
     name: 'Skill Swap',
     type: 'Psychic',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Imprison': {
     name: 'Imprison',
     type: 'Psychic',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Refresh': {
     name: 'Refresh',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Grudge': {
     name: 'Grudge',
     type: 'Ghost',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Snatch': {
     name: 'Snatch',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 3,
     target: 'Your Pokemon',
-    flags: {
-    },
   },
   'Secret Power': {
     name: 'Secret Power',
     type: 'Normal',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Secret Power'
+      alt: 'Secret Power'
     }],
   },
   'Dive': {
     name: 'Dive',
     type: 'Water',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3305,90 +3022,76 @@ export const MOVES: {[name: string]: Move} = {
   'Force Palm': {
     name: 'Force Palm',
     type: 'Fighting',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Parlyze'
+      alt: 'Parlyze'
     }],
   },
   'Camouflage': {
     name: 'Camouflage',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 20,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Tail Glow': {
     name: 'Tail Glow',
     type: 'Bug',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Luster Purge': {
     name: 'Luster Purge',
     type: 'Psychic',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 50,
-      status: 'Lower Spec. Def.'
+      alt: 'Lower Spec. Def.'
     }],
   },
   'Mist Ball': {
     name: 'Mist Ball',
     type: 'Psychic',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 50,
-      status: 'Lower Spec. Attk.'
+      alt: 'Lower Spec. Attk.'
     }],
   },
   'Featherdance': {
     name: 'Featherdance',
     type: 'Flying',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Teeter Dance': {
     name: 'Teeter Dance',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 32,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
   },
   'Blaze Kick': {
     name: 'Blaze Kick',
     type: 'Fire',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3396,24 +3099,22 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Burn chance increased crit'
+      alt: 'Burn chance increased crit'
     }],
   },
   'Mud Sport': {
     name: 'Mud Sport',
     type: 'Ground',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 15,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Ice Ball': {
     name: 'Ice Ball',
     type: 'Ice',
-    power: 30,
-    accuracy: 90,
+    bp: 30,
+    acc: .9,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3423,8 +3124,8 @@ export const MOVES: {[name: string]: Move} = {
   'Needle Arm': {
     name: 'Needle Arm',
     type: 'Grass',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3432,24 +3133,22 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Flinch 2x on minimized'
+      alt: 'Flinch 2x on minimized'
     }],
   },
   'Slack Off': {
     name: 'Slack Off',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 10,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Hyper Voice': {
     name: 'Hyper Voice',
     type: 'Normal',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 16,
     target: 'Both Opponent Pokemon',
     flags: {
@@ -3457,14 +3156,14 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 20,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Poison Fang': {
     name: 'Poison Fang',
     type: 'Poison',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3472,14 +3171,14 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 50,
-      status: 'Badly Poison Chance'
+      alt: 'Badly Poison Chance'
     }],
   },
   'Crush Claw': {
     name: 'Crush Claw',
     type: 'Normal',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3487,34 +3186,30 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 50,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Blast Burn': {
     name: 'Blast Burn',
     type: 'Fire',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Hydro Cannon': {
     name: 'Hydro Cannon',
     type: 'Water',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Meteor Mash': {
     name: 'Meteor Mash',
     type: 'Steel',
-    power: 100,
-    accuracy: 100,
+    bp: 100,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3522,68 +3217,58 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Raise Own Attk.'
+      alt: 'Raise Own Attk.'
     }],
   },
   'Shadow Sneak': {
     name: 'Shadow Sneak',
     type: 'Ghost',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Weather Ball': {
     name: 'Weather Ball',
     type: 'Normal',
-    power: 50,
-    accuracy: 100,
+    bp: 50,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Aromatherapy': {
     name: 'Aromatherapy',
     type: 'Grass',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 2,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Fake Tears': {
     name: 'Fake Tears',
     type: 'Dark',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Air Slash': {
     name: 'Air Slash',
     type: 'Flying',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 25,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Target flinches'
+      alt: 'Target flinches'
     }],
   },
   'Overheat': {
     name: 'Overheat',
     type: 'Fire',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3593,114 +3278,96 @@ export const MOVES: {[name: string]: Move} = {
   'Odor Sleuth': {
     name: 'Odor Sleuth',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Rock Tomb': {
     name: 'Rock Tomb',
     type: 'Rock',
-    power: 55,
-    accuracy: 100,
+    bp: 55,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Lower Spd.'
+      chance: 1,
+      alt: 'Lower Spd.'
     }],
   },
   'Silver Wind': {
     name: 'Silver Wind',
     type: 'Bug',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Omniboost'
+      alt: 'Omniboost'
     }],
   },
   'Flash Cannon': {
     name: 'Flash Cannon',
     type: 'Steel',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Lower Def.'
+      alt: 'Lower Def.'
     }],
   },
   'Grasswhistle': {
     name: 'Grasswhistle',
     type: 'Grass',
-    power: 0,
-    accuracy: 70,
+    bp: 0,
+    acc: .7,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Tickle': {
     name: 'Tickle',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 6,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Cosmic Power': {
     name: 'Cosmic Power',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 6,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Water Spout': {
     name: 'Water Spout',
     type: 'Water',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 8,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
   },
   'Signal Beam': {
     name: 'Signal Beam',
     type: 'Bug',
-    power: 75,
-    accuracy: 100,
+    bp: 75,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 10,
-      status: 'Confuse'
+      alt: 'Confuse'
     }],
   },
   'Shadow Punch': {
     name: 'Shadow Punch',
     type: 'Ghost',
-    power: 70,
-    accuracy: 0,
+    bp: 70,
+    acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3710,22 +3377,20 @@ export const MOVES: {[name: string]: Move} = {
   'Extrasensory': {
     name: 'Extrasensory',
     type: 'Psychic',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Flinch 2x on minimized'
+      alt: 'Flinch 2x on minimized'
     }],
   },
   'Sky Uppercut': {
     name: 'Sky Uppercut',
     type: 'Fighting',
-    power: 90,
-    accuracy: 100,
+    bp: 90,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3735,22 +3400,20 @@ export const MOVES: {[name: string]: Move} = {
   'Sand Tomb': {
     name: 'Sand Tomb',
     type: 'Ground',
-    power: 15,
-    accuracy: 100,
+    bp: 15,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: '2-5 Hits + Lower Evas.'
+      chance: 1,
+      alt: '2-5 Hits + Lower Evas.'
     }],
   },
   'Sheer Cold': {
     name: 'Sheer Cold',
     type: 'Ice',
-    power: 1,
-    accuracy: 30,
+    bp: 1,
+    acc: .3,
     pp: 8,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3760,22 +3423,20 @@ export const MOVES: {[name: string]: Move} = {
   'Muddy Water': {
     name: 'Muddy Water',
     type: 'Water',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 10,
     target: 'Both Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 30,
-      status: 'Lower Acc.'
+      alt: 'Lower Acc.'
     }],
   },
   'Bullet Seed': {
     name: 'Bullet Seed',
     type: 'Grass',
-    power: 25,
-    accuracy: 100,
+    bp: 25,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3785,8 +3446,8 @@ export const MOVES: {[name: string]: Move} = {
   'Aerial Ace': {
     name: 'Aerial Ace',
     type: 'Flying',
-    power: 60,
-    accuracy: 0,
+    bp: 60,
+    acc: 0,
     pp: 32,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3796,48 +3457,40 @@ export const MOVES: {[name: string]: Move} = {
   'Ice Shard': {
     name: 'Ice Shard',
     type: 'Ice',
-    power: 40,
-    accuracy: 100,
+    bp: 40,
+    acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Iron Defense': {
     name: 'Iron Defense',
     type: 'Steel',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Block': {
     name: 'Block',
     type: 'Normal',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Howl': {
     name: 'Howl',
     type: 'Normal',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 5,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Dragon Claw': {
     name: 'Dragon Claw',
     type: 'Dragon',
-    power: 80,
-    accuracy: 100,
+    bp: 80,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3847,28 +3500,24 @@ export const MOVES: {[name: string]: Move} = {
   'Frenzy Plant': {
     name: 'Frenzy Plant',
     type: 'Grass',
-    power: 150,
-    accuracy: 100,
+    bp: 150,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Bulk Up': {
     name: 'Bulk Up',
     type: 'Fighting',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Bounce': {
     name: 'Bounce',
     type: 'Flying',
-    power: 85,
-    accuracy: 85,
+    bp: 85,
+    acc: .85,
     pp: 5,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3876,28 +3525,26 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Fly/Bounce/Dig'
+      alt: 'Fly/Bounce/Dig'
     }],
   },
   'Mud Shot': {
     name: 'Mud Shot',
     type: 'Ground',
-    power: 55,
-    accuracy: 100,
+    bp: 55,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'Lower Spd.'
+      chance: 1,
+      alt: 'Lower Spd.'
     }],
   },
   'Poison Tail': {
     name: 'Poison Tail',
     type: 'Poison',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3905,24 +3552,22 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: 'Badly Poison Chance'
+      alt: 'Badly Poison Chance'
     }],
   },
   'Hidden Power': {
     name: 'Hidden Power',
     type: 'Bug',
-    power: 70,
-    accuracy: 100,
+    bp: 70,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Volt Tackle': {
     name: 'Volt Tackle',
     type: 'Electric',
-    power: 120,
-    accuracy: 100,
+    bp: 120,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3931,44 +3576,38 @@ export const MOVES: {[name: string]: Move} = {
     },
     secondary: [{
       chance: 30,
-      status: '1/3 Recoil'
+      alt: '1/3 Recoil'
     }],
   },
   'Magical Leaf': {
     name: 'Magical Leaf',
     type: 'Grass',
-    power: 60,
-    accuracy: 0,
+    bp: 60,
+    acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Water Sport': {
     name: 'Water Sport',
     type: 'Water',
-    power: 0,
-    accuracy: 100,
+    bp: 0,
+    acc: 1,
     pp: 15,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Calm Mind': {
     name: 'Calm Mind',
     type: 'Psychic',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Leaf Blade': {
     name: 'Leaf Blade',
     type: 'Grass',
-    power: 95,
-    accuracy: 100,
+    bp: 95,
+    acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3978,18 +3617,16 @@ export const MOVES: {[name: string]: Move} = {
   'Dragon Dance': {
     name: 'Dragon Dance',
     type: 'Dragon',
-    power: 0,
-    accuracy: 0,
+    bp: 0,
+    acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
-    flags: {
-    },
   },
   'Rock Blast': {
     name: 'Rock Blast',
     type: 'Rock',
-    power: 25,
-    accuracy: 80,
+    bp: 25,
+    acc: .8,
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
@@ -3999,49 +3636,41 @@ export const MOVES: {[name: string]: Move} = {
   'Shock Wave': {
     name: 'Shock Wave',
     type: 'Electric',
-    power: 60,
-    accuracy: 0,
+    bp: 60,
+    acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Water Pulse': {
     name: 'Water Pulse',
     type: 'Water',
-    power: 60,
-    accuracy: 100,
+    bp: 60,
+    acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
       chance: 20,
-      status: 'Confuse'
+      alt: 'Confuse'
     }],
   },
   'Doom Desire': {
     name: 'Doom Desire',
     type: 'Steel',
-    power: 120,
-    accuracy: 85,
+    bp: 120,
+    acc: .85,
     pp: 5,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
   },
   'Psycho Boost': {
     name: 'Psycho Boost',
     type: 'Psychic',
-    power: 140,
-    accuracy: 100,
+    bp: 140,
+    acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    flags: {
-    },
     secondary: [{
-      chance: 100,
-      status: 'take 1/4 damage'
+      chance: 1,
+      alt: 'take 1/4 damage'
     }],
   },
 };
