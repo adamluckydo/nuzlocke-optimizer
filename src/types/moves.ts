@@ -11,23 +11,21 @@ export interface Move {
   target: MoveTarget;
   priority?: number;
   flags?: {
-    twoTurn?: boolean; // Takes one turn to set up, and a second turn to activate
-    drain?: number; // Fraction of damage dealt to recover as own health
+    drain?: number; // Fraction of damage dealt to recover as own HP
+    recoil?: number; // Fraction of max HP dealt to take as recoil damage
+    recover?: number; // Fraction of own max HP to recover
+    sacrifice?: number; // Fraction of own max HP to sacrifice
     twoHit?: boolean; // Hits 2x
     multihit?: boolean; // Hits 2-5x; 25% chance of each
-    recoil?: number; // Fraction of max health taken as recoil damage
-    contact?: boolean;
-    sound?: boolean;
-    directDamage?: boolean;
+    contact?: boolean; // Attacking Pokemon touches opponent
+    sound?: boolean; // Sound-based move
+    directDamage?: boolean; // No damage calculation
     oneHitKO?: boolean; // Fails if under opponent level, 30% chance if equal level, +1% chance per level above
     highCrit?: boolean; // +1 crit stage
   };
-  self?: {
-    focusEnergy?: boolean; // +2 crit stages; fails if Pokemon is already focused
-    statChanges?: Partial<StatStages>; // Number of stages to add/subtract from each stat
-  };
   secondary?: {
-    chance: number;
+    chance: number; // Likelihood of secondary effect procing
+    self?: boolean; // Whether this secondary effect applies to the user
     flinch?: boolean;
     status?: Status;
     confuse?: boolean;

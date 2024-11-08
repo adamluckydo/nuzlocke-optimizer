@@ -16,4 +16,4 @@ export type Type =
   | 'Ice'
   | 'Dragon'
   | 'Dark'
-  | 'Fairy';
+  | 'Unknown';
