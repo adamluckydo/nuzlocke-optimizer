@@ -1,0 +1,1266 @@
+{
+  "Bulbasaur": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Ivysaur"
+    }
+  ],
+  "Ivysaur": [
+    {
+      "method": "Level",
+      "requirement": "32",
+      "evolution": "Venusaur"
+    }
+  ],
+  "Charmander": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Charmeleon"
+    }
+  ],
+  "Charmeleon": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Charizard"
+    }
+  ],
+  "Squirtle": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Wartortle"
+    }
+  ],
+  "Wartortle": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Blastoise"
+    }
+  ],
+  "Caterpie": [
+    {
+      "method": "Level",
+      "requirement": "7",
+      "evolution": "Metapod"
+    }
+  ],
+  "Metapod": [
+    {
+      "method": "Level",
+      "requirement": "10",
+      "evolution": "Butterfree"
+    }
+  ],
+  "Weedle": [
+    {
+      "method": "Level",
+      "requirement": "7",
+      "evolution": "Kakuna"
+    }
+  ],
+  "Kakuna": [
+    {
+      "method": "Level",
+      "requirement": "10",
+      "evolution": "Beedrill"
+    }
+  ],
+  "Pidgey": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Pidgeotto"
+    }
+  ],
+  "Pidgeotto": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Pidgeot"
+    }
+  ],
+  "Rattata": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Raticate"
+    }
+  ],
+  "Spearow": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Fearow"
+    }
+  ],
+  "Ekans": [
+    {
+      "method": "Level",
+      "requirement": "22",
+      "evolution": "Arbok"
+    }
+  ],
+  "Pikachu": [
+    {
+      "method": "Item",
+      "requirement": "Thunder Stone",
+      "evolution": "Raichu"
+    }
+  ],
+  "Sandshrew": [
+    {
+      "method": "Level",
+      "requirement": "22",
+      "evolution": "Sandslash"
+    }
+  ],
+  "Nidoran F": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Nidorina"
+    }
+  ],
+  "Nidorina": [
+    {
+      "method": "Item",
+      "requirement": "Moon Stone",
+      "evolution": "Nidoqueen"
+    }
+  ],
+  "Nidoran M": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Nidorino"
+    }
+  ],
+  "Nidorino": [
+    {
+      "method": "Item",
+      "requirement": "Moon Stone",
+      "evolution": "Nidoking"
+    }
+  ],
+  "Clefairy": [
+    {
+      "method": "Item",
+      "requirement": "Moon Stone",
+      "evolution": "Clefable"
+    }
+  ],
+  "Vulpix": [
+    {
+      "method": "Item",
+      "requirement": "Fire Stone",
+      "evolution": "Ninetales"
+    }
+  ],
+  "Jigglypuff": [
+    {
+      "method": "Item",
+      "requirement": "Moon Stone",
+      "evolution": "Wigglytuff"
+    }
+  ],
+  "Zubat": [
+    {
+      "method": "Level",
+      "requirement": "22",
+      "evolution": "Golbat"
+    }
+  ],
+  "Golbat": [
+    {
+      "method": "Level",
+      "requirement": "1",
+      "evolution": "Crobat"
+    }
+  ],
+  "Oddish": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Gloom"
+    }
+  ],
+  "Gloom": [
+    {
+      "method": "Item",
+      "requirement": "Leaf Stone",
+      "evolution": "Vileplume"
+    },
+    {
+      "method": "Item",
+      "requirement": "Sun Stone",
+      "evolution": "Bellossom"
+    }
+  ],
+  "Paras": [
+    {
+      "method": "Level",
+      "requirement": "24",
+      "evolution": "Parasect"
+    }
+  ],
+  "Venonat": [
+    {
+      "method": "Level",
+      "requirement": "31",
+      "evolution": "Venomoth"
+    }
+  ],
+  "Diglett": [
+    {
+      "method": "Level",
+      "requirement": "26",
+      "evolution": "Dugtrio"
+    }
+  ],
+  "Meowth": [
+    {
+      "method": "Level",
+      "requirement": "28",
+      "evolution": "Persian"
+    }
+  ],
+  "Psyduck": [
+    {
+      "method": "Level",
+      "requirement": "33",
+      "evolution": "Golduck"
+    }
+  ],
+  "Mankey": [
+    {
+      "method": "Level",
+      "requirement": "28",
+      "evolution": "Primeape"
+    }
+  ],
+  "Growlithe": [
+    {
+      "method": "Item",
+      "requirement": "Fire Stone",
+      "evolution": "Arcanine"
+    }
+  ],
+  "Poliwag": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Poliwhirl"
+    }
+  ],
+  "Poliwhirl": [
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Poliwrath"
+    },
+    {
+      "method": "Trade Item",
+      "requirement": "Kings Rock",
+      "evolution": "Politoed"
+    }
+  ],
+  "Abra": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Kadabra"
+    }
+  ],
+  "Kadabra": [
+    {
+      "method": "Level",
+      "requirement": "55",
+      "evolution": "Alakazam"
+    }
+  ],
+  "Machop": [
+    {
+      "method": "Level",
+      "requirement": "28",
+      "evolution": "Machoke"
+    }
+  ],
+  "Machoke": [
+    {
+      "method": "Level",
+      "requirement": "50",
+      "evolution": "Machamp"
+    }
+  ],
+  "Bellsprout": [
+    {
+      "method": "Level",
+      "requirement": "21",
+      "evolution": "Weepinbell"
+    }
+  ],
+  "Weepinbell": [
+    {
+      "method": "Item",
+      "requirement": "Leaf Stone",
+      "evolution": "Victreebel"
+    }
+  ],
+  "Tentacool": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Tentacruel"
+    }
+  ],
+  "Geodude": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Graveler"
+    }
+  ],
+  "Graveler": [
+    {
+      "method": "Level",
+      "requirement": "42",
+      "evolution": "Golem"
+    }
+  ],
+  "Ponyta": [
+    {
+      "method": "Level",
+      "requirement": "40",
+      "evolution": "Rapidash"
+    }
+  ],
+  "Slowpoke": [
+    {
+      "method": "Level",
+      "requirement": "37",
+      "evolution": "Slowbro"
+    },
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Slowking"
+    }
+  ],
+  "Magnemite": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Magneton"
+    }
+  ],
+  "Doduo": [
+    {
+      "method": "Level",
+      "requirement": "31",
+      "evolution": "Dodrio"
+    }
+  ],
+  "Seel": [
+    {
+      "method": "Level",
+      "requirement": "34",
+      "evolution": "Dewgong"
+    }
+  ],
+  "Grimer": [
+    {
+      "method": "Level",
+      "requirement": "38",
+      "evolution": "Muk"
+    }
+  ],
+  "Shellder": [
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Cloyster"
+    }
+  ],
+  "Gastly": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Haunter"
+    }
+  ],
+  "Haunter": [
+    {
+      "method": "Level",
+      "requirement": "50",
+      "evolution": "Gengar"
+    }
+  ],
+  "Onix": [
+    {
+      "method": "Trade Item",
+      "requirement": "Metal Coat",
+      "evolution": "Steelix"
+    }
+  ],
+  "Drowzee": [
+    {
+      "method": "Level",
+      "requirement": "26",
+      "evolution": "Hypno"
+    }
+  ],
+  "Krabby": [
+    {
+      "method": "Level",
+      "requirement": "28",
+      "evolution": "Kingler"
+    }
+  ],
+  "Voltorb": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Electrode"
+    }
+  ],
+  "Exeggcute": [
+    {
+      "method": "Item",
+      "requirement": "Leaf Stone",
+      "evolution": "Exeggutor"
+    }
+  ],
+  "Cubone": [
+    {
+      "method": "Level",
+      "requirement": "28",
+      "evolution": "Marowak"
+    }
+  ],
+  "Koffing": [
+    {
+      "method": "Level",
+      "requirement": "35",
+      "evolution": "Weezing"
+    }
+  ],
+  "Rhyhorn": [
+    {
+      "method": "Level",
+      "requirement": "42",
+      "evolution": "Rhydon"
+    }
+  ],
+  "Chansey": [
+    {
+      "method": "Level",
+      "requirement": "64",
+      "evolution": "Blissey"
+    }
+  ],
+  "Horsea": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Seadra"
+    }
+  ],
+  "Seadra": [
+    {
+      "method": "Level",
+      "requirement": "55",
+      "evolution": "Kingdra"
+    }
+  ],
+  "Goldeen": [
+    {
+      "method": "Level",
+      "requirement": "33",
+      "evolution": "Seaking"
+    }
+  ],
+  "Staryu": [
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Starmie"
+    }
+  ],
+  "Scyther": [
+    {
+      "method": "Trade Item",
+      "requirement": "Metal Coat",
+      "evolution": "Scizor"
+    }
+  ],
+  "Magikarp": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Gyarados"
+    }
+  ],
+  "Eevee": [
+    {
+      "method": "Item",
+      "requirement": "Thunder Stone",
+      "evolution": "Jolteon"
+    },
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Vaporeon"
+    },
+    {
+      "method": "Item",
+      "requirement": "Fire Stone",
+      "evolution": "Flareon"
+    },
+    {
+      "method": "Item",
+      "requirement": "Moon Stone",
+      "evolution": "Espeon"
+    },
+    {
+      "method": "Item",
+      "requirement": "Sun Stone",
+      "evolution": "Umbreon"
+    }
+  ],
+  "Porygon": [
+    {
+      "method": "Level",
+      "requirement": "42",
+      "evolution": "Porygon2"
+    }
+  ],
+  "Omanyte": [
+    {
+      "method": "Level",
+      "requirement": "40",
+      "evolution": "Omastar"
+    }
+  ],
+  "Kabuto": [
+    {
+      "method": "Level",
+      "requirement": "40",
+      "evolution": "Kabutops"
+    }
+  ],
+  "Dratini": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Dragonair"
+    }
+  ],
+  "Dragonair": [
+    {
+      "method": "Level",
+      "requirement": "55",
+      "evolution": "Dragonite"
+    }
+  ],
+  "Chikorita": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Bayleef"
+    }
+  ],
+  "Bayleef": [
+    {
+      "method": "Level",
+      "requirement": "32",
+      "evolution": "Meganium"
+    }
+  ],
+  "Cyndaquil": [
+    {
+      "method": "Level",
+      "requirement": "14",
+      "evolution": "Quilava"
+    }
+  ],
+  "Quilava": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Typhlosion"
+    }
+  ],
+  "Totodile": [
+    {
+      "method": "Level",
+      "requirement": "18",
+      "evolution": "Croconaw"
+    }
+  ],
+  "Croconaw": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Feraligatr"
+    }
+  ],
+  "Sentret": [
+    {
+      "method": "Level",
+      "requirement": "15",
+      "evolution": "Furret"
+    }
+  ],
+  "Hoothoot": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Noctowl"
+    }
+  ],
+  "Ledyba": [
+    {
+      "method": "Level",
+      "requirement": "18",
+      "evolution": "Ledian"
+    }
+  ],
+  "Spinarak": [
+    {
+      "method": "Level",
+      "requirement": "22",
+      "evolution": "Ariados"
+    }
+  ],
+  "Chinchou": [
+    {
+      "method": "Level",
+      "requirement": "27",
+      "evolution": "Lanturn"
+    }
+  ],
+  "Pichu": [
+    {
+      "method": "Level",
+      "requirement": "1",
+      "evolution": "Pikachu"
+    }
+  ],
+  "Cleffa": [
+    {
+      "method": "Level",
+      "requirement": "1",
+      "evolution": "Clefairy"
+    }
+  ],
+  "Igglybuff": [
+    {
+      "method": "Level",
+      "requirement": "1",
+      "evolution": "Jigglypuff"
+    }
+  ],
+  "Togepi": [
+    {
+      "method": "Level",
+      "requirement": "1",
+      "evolution": "Togetic"
+    }
+  ],
+  "Natu": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Xatu"
+    }
+  ],
+  "Mareep": [
+    {
+      "method": "Level",
+      "requirement": "15",
+      "evolution": "Flaaffy"
+    }
+  ],
+  "Flaaffy": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Ampharos"
+    }
+  ],
+  "Marill": [
+    {
+      "method": "Level",
+      "requirement": "18",
+      "evolution": "Azumarill"
+    }
+  ],
+  "Hoppip": [
+    {
+      "method": "Level",
+      "requirement": "18",
+      "evolution": "Skiploom"
+    }
+  ],
+  "Skiploom": [
+    {
+      "method": "Level",
+      "requirement": "27",
+      "evolution": "Jumpluff"
+    }
+  ],
+  "Sunkern": [
+    {
+      "method": "Item",
+      "requirement": "Sun Stone",
+      "evolution": "Sunflora"
+    }
+  ],
+  "Wooper": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Quagsire"
+    }
+  ],
+  "Pineco": [
+    {
+      "method": "Level",
+      "requirement": "31",
+      "evolution": "Forretress"
+    }
+  ],
+  "Snubbull": [
+    {
+      "method": "Level",
+      "requirement": "23",
+      "evolution": "Granbull"
+    }
+  ],
+  "Teddiursa": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Ursaring"
+    }
+  ],
+  "Slugma": [
+    {
+      "method": "Level",
+      "requirement": "38",
+      "evolution": "Magcargo"
+    }
+  ],
+  "Swinub": [
+    {
+      "method": "Level",
+      "requirement": "33",
+      "evolution": "Piloswine"
+    }
+  ],
+  "Remoraid": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Octillery"
+    }
+  ],
+  "Houndour": [
+    {
+      "method": "Level",
+      "requirement": "24",
+      "evolution": "Houndoom"
+    }
+  ],
+  "Phanpy": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Donphan"
+    }
+  ],
+  "Tyrogue": [
+    {
+      "method": "Level Atk < Def",
+      "requirement": "20",
+      "evolution": "Hitmonchan"
+    },
+    {
+      "method": "Level Atk > Def",
+      "requirement": "20",
+      "evolution": "Hitmonlee"
+    },
+    {
+      "method": "Level Atk = Def",
+      "requirement": "20",
+      "evolution": "Hitmontop"
+    }
+  ],
+  "Smoochum": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Jynx"
+    }
+  ],
+  "Elekid": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Electabuzz"
+    }
+  ],
+  "Magby": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Magmar"
+    }
+  ],
+  "Larvitar": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Pupitar"
+    }
+  ],
+  "Pupitar": [
+    {
+      "method": "Level",
+      "requirement": "55",
+      "evolution": "Tyranitar"
+    }
+  ],
+  "Treecko": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Grovyle"
+    }
+  ],
+  "Grovyle": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Sceptile"
+    }
+  ],
+  "Torchic": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Combusken"
+    }
+  ],
+  "Combusken": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Blaziken"
+    }
+  ],
+  "Mudkip": [
+    {
+      "method": "Level",
+      "requirement": "16",
+      "evolution": "Marshtomp"
+    }
+  ],
+  "Marshtomp": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Swampert"
+    }
+  ],
+  "Poochyena": [
+    {
+      "method": "Level",
+      "requirement": "18",
+      "evolution": "Mightyena"
+    }
+  ],
+  "Zigzagoon": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Linoone"
+    }
+  ],
+  "Wurmple": [
+    {
+      "method": "Level Silcoon",
+      "requirement": "7",
+      "evolution": "Silcoon"
+    },
+    {
+      "method": "Level Cascoon",
+      "requirement": "7",
+      "evolution": "Cascoon"
+    }
+  ],
+  "Silcoon": [
+    {
+      "method": "Level",
+      "requirement": "10",
+      "evolution": "Beautifly"
+    }
+  ],
+  "Cascoon": [
+    {
+      "method": "Level",
+      "requirement": "10",
+      "evolution": "Dustox"
+    }
+  ],
+  "Lotad": [
+    {
+      "method": "Level",
+      "requirement": "14",
+      "evolution": "Lombre"
+    }
+  ],
+  "Lombre": [
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Ludicolo"
+    }
+  ],
+  "Seedot": [
+    {
+      "method": "Level",
+      "requirement": "14",
+      "evolution": "Nuzleaf"
+    }
+  ],
+  "Nuzleaf": [
+    {
+      "method": "Item",
+      "requirement": "Leaf Stone",
+      "evolution": "Shiftry"
+    }
+  ],
+  "Nincada": [
+    {
+      "method": "Level Ninjask",
+      "requirement": "20",
+      "evolution": "Ninjask"
+    },
+    {
+      "method": "Level Shedinja",
+      "requirement": "20",
+      "evolution": "Shedinja"
+    }
+  ],
+  "Taillow": [
+    {
+      "method": "Level",
+      "requirement": "22",
+      "evolution": "Swellow"
+    }
+  ],
+  "Shroomish": [
+    {
+      "method": "Level",
+      "requirement": "23",
+      "evolution": "Breloom"
+    }
+  ],
+  "Wingull": [
+    {
+      "method": "Level",
+      "requirement": "25",
+      "evolution": "Pelipper"
+    }
+  ],
+  "Surskit": [
+    {
+      "method": "Level",
+      "requirement": "22",
+      "evolution": "Masquerain"
+    }
+  ],
+  "Wailmer": [
+    {
+      "method": "Level",
+      "requirement": "70",
+      "evolution": "Wailord"
+    }
+  ],
+  "Skitty": [
+    {
+      "method": "Item",
+      "requirement": "Moon Stone",
+      "evolution": "Delcatty"
+    }
+  ],
+  "Baltoy": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Claydol"
+    }
+  ],
+  "Barboach": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Whiscash"
+    }
+  ],
+  "Corphish": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Crawdaunt"
+    }
+  ],
+  "Feebas": [
+    {
+      "method": "Beauty",
+      "requirement": "170",
+      "evolution": "Milotic"
+    }
+  ],
+  "Carvanha": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Sharpedo"
+    }
+  ],
+  "Trapinch": [
+    {
+      "method": "Level",
+      "requirement": "35",
+      "evolution": "Vibrava"
+    }
+  ],
+  "Vibrava": [
+    {
+      "method": "Level",
+      "requirement": "45",
+      "evolution": "Flygon"
+    }
+  ],
+  "Makuhita": [
+    {
+      "method": "Level",
+      "requirement": "24",
+      "evolution": "Hariyama"
+    }
+  ],
+  "Electrike": [
+    {
+      "method": "Level",
+      "requirement": "26",
+      "evolution": "Manectric"
+    }
+  ],
+  "Numel": [
+    {
+      "method": "Level",
+      "requirement": "33",
+      "evolution": "Camerupt"
+    }
+  ],
+  "Spheal": [
+    {
+      "method": "Level",
+      "requirement": "32",
+      "evolution": "Sealeo"
+    }
+  ],
+  "Sealeo": [
+    {
+      "method": "Level",
+      "requirement": "44",
+      "evolution": "Walrein"
+    }
+  ],
+  "Cacnea": [
+    {
+      "method": "Level",
+      "requirement": "32",
+      "evolution": "Cacturne"
+    }
+  ],
+  "Snorunt": [
+    {
+      "method": "Level",
+      "requirement": "42",
+      "evolution": "Glalie"
+    }
+  ],
+  "Azurill": [
+    {
+      "method": "Level",
+      "requirement": "1",
+      "evolution": "Marill"
+    }
+  ],
+  "Spoink": [
+    {
+      "method": "Level",
+      "requirement": "32",
+      "evolution": "Grumpig"
+    }
+  ],
+  "Meditite": [
+    {
+      "method": "Level",
+      "requirement": "37",
+      "evolution": "Medicham"
+    }
+  ],
+  "Swablu": [
+    {
+      "method": "Level",
+      "requirement": "35",
+      "evolution": "Altaria"
+    }
+  ],
+  "Wynaut": [
+    {
+      "method": "Level",
+      "requirement": "15",
+      "evolution": "Wobbuffet"
+    }
+  ],
+  "Duskull": [
+    {
+      "method": "Level",
+      "requirement": "65",
+      "evolution": "Dusclops"
+    }
+  ],
+  "Slakoth": [
+    {
+      "method": "Level",
+      "requirement": "18",
+      "evolution": "Vigoroth"
+    }
+  ],
+  "Vigoroth": [
+    {
+      "method": "Level",
+      "requirement": "36",
+      "evolution": "Slaking"
+    }
+  ],
+  "Gulpin": [
+    {
+      "method": "Level",
+      "requirement": "26",
+      "evolution": "Swalot"
+    }
+  ],
+  "Whismur": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Loudred"
+    }
+  ],
+  "Loudred": [
+    {
+      "method": "Level",
+      "requirement": "40",
+      "evolution": "Exploud"
+    }
+  ],
+  "Clamperl": [
+    {
+      "method": "Item",
+      "requirement": "Water Stone",
+      "evolution": "Gorebyss"
+    },
+    {
+      "method": "Level",
+      "requirement": "24",
+      "evolution": "Huntail"
+    }
+  ],
+  "Shuppet": [
+    {
+      "method": "Level",
+      "requirement": "37",
+      "evolution": "Banette"
+    }
+  ],
+  "Aron": [
+    {
+      "method": "Level",
+      "requirement": "32",
+      "evolution": "Lairon"
+    }
+  ],
+  "Lairon": [
+    {
+      "method": "Level",
+      "requirement": "42",
+      "evolution": "Aggron"
+    }
+  ],
+  "Lileep": [
+    {
+      "method": "Level",
+      "requirement": "40",
+      "evolution": "Cradily"
+    }
+  ],
+  "Anorith": [
+    {
+      "method": "Level",
+      "requirement": "40",
+      "evolution": "Armaldo"
+    }
+  ],
+  "Ralts": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Kirlia"
+    }
+  ],
+  "Kirlia": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Gardevoir"
+    }
+  ],
+  "Bagon": [
+    {
+      "method": "Level",
+      "requirement": "30",
+      "evolution": "Shelgon"
+    }
+  ],
+  "Shelgon": [
+    {
+      "method": "Level",
+      "requirement": "50",
+      "evolution": "Salamence"
+    }
+  ],
+  "Beldum": [
+    {
+      "method": "Level",
+      "requirement": "20",
+      "evolution": "Metang"
+    }
+  ],
+  "Metang": [
+    {
+      "method": "Level",
+      "requirement": "45",
+      "evolution": "Metagross"
+    }
+  ]
+}

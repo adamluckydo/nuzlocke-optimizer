@@ -4,6 +4,7 @@
   "description": "A calculator and guide designed to help players optimize their hardcore Pokémon Nuzlocke runs.",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "convert": "ts-node src/scripts/pokemonCleanup.ts",
     "lint": "eslint --fix src",
     "test": "jest",
     "coverage": "jest --coverage",

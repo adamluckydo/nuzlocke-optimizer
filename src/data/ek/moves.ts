@@ -1,5 +1,6 @@
-import { Move } from '../types';
+import { Move } from '../../types';
 
+/** All moves are specifically for EK. Added moves / increased accuracy / modified effects */
 export const MOVES: {[name: string]: Move} = {
   'Pound': {
     name: 'Pound',

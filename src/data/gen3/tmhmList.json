@@ -1,0 +1,510 @@
+{
+  "TM01": {
+    "move": "Focus Punch",
+    "locations": {
+      "hoenn": "Route 115, Pickup**E** (1% chance, lv 71-90)",
+      "kanto": "Silph Co."
+    }
+  },
+  "TM02": {
+    "move": "Dragon Claw",
+    "locations": {
+      "hoenn": "Meteor Falls",
+      "kanto": "Victory Road"
+    }
+  },
+  "TM03": {
+    "move": "Water Pulse",
+    "locations": {
+      "hoenn": "Prize for defeating Wallace**RS**/Juan**E**",
+      "kanto": "Prize for defeating Misty"
+    }
+  },
+  "TM04": {
+    "move": "Calm Mind",
+    "locations": {
+      "hoenn": "Prize for defeating Tate and Liza",
+      "kanto": "Prize for defeating Sabrina"
+    }
+  },
+  "TM05": {
+    "move": "Roar",
+    "locations": {
+      "hoenn": "Route 114, Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Route 4, Celadon Department Store"
+    },
+    "price": {
+      "kanto": "1000"
+    }
+  },
+  "TM06": {
+    "move": "Toxic",
+    "locations": {
+      "hoenn": "Fiery Path, Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Prize for defeating Koga"
+    }
+  },
+  "TM07": {
+    "move": "Hail",
+    "locations": {
+      "hoenn": "Shoal Cave",
+      "kanto": "Victory Road"
+    }
+  },
+  "TM08": {
+    "move": "Bulk Up",
+    "locations": {
+      "hoenn": "Prize for defeating Brawly",
+      "kanto": "Silph Co."
+    }
+  },
+  "TM09": {
+    "move": "Bullet Seed",
+    "locations": {
+      "hoenn": "Route 104",
+      "kanto": "Mt. Moon"
+    }
+  },
+  "TM10": {
+    "move": "Hidden Power",
+    "locations": {
+      "hoenn": "Fortree City, Slateport City",
+      "kanto": "Pickup (5% chance)"
+    },
+    "price": {
+      "hoenn": "3000"
+    }
+  },
+  "TM11": {
+    "move": "Sunny Day",
+    "locations": {
+      "hoenn": "Scorched Slab, Trainer Hill**E**",
+      "kanto": "Safari Zone"
+    }
+  },
+  "TM12": {
+    "move": "Taunt",
+    "locations": {
+      "hoenn": "Trick House",
+      "kanto": "Rocket Hideout"
+    }
+  },
+  "TM13": {
+    "move": "Ice Beam",
+    "locations": {
+      "hoenn": "Abandoned Ship, Mauville Game Corner",
+      "kanto": "Rocket Game Corner"
+    },
+    "price": {
+      "hoenn": "4000 Coins",
+      "kanto": "4000 Coins"
+    }
+  },
+  "TM14": {
+    "move": "Blizzard",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Pokémon Mansion"
+    },
+    "price": {
+      "hoenn": "5500"
+    }
+  },
+  "TM15": {
+    "move": "Hyper Beam",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Celadon Department Store"
+    },
+    "price": {
+      "hoenn": "7500",
+      "kanto": "7500"
+    }
+  },
+  "TM16": {
+    "move": "Light Screen",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Celadon Department Store"
+    },
+    "price": {
+      "hoenn": "3000",
+      "kanto": "3000"
+    }
+  },
+  "TM17": {
+    "move": "Protect",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Kanto Power Plant"
+    },
+    "price": {
+      "hoenn": "3000"
+    }
+  },
+  "TM18": {
+    "move": "Rain Dance",
+    "locations": {
+      "hoenn": "Abandoned Ship",
+      "kanto": "Route 15"
+    }
+  },
+  "TM19": {
+    "move": "Giga Drain",
+    "locations": {
+      "hoenn": "Route 123, Trainer Hill**E**",
+      "kanto": "Prize for defeating Erika"
+    }
+  },
+  "TM20": {
+    "move": "Safeguard",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Celadon Department Store"
+    },
+    "price": {
+      "hoenn": "3000",
+      "kanto": "3000"
+    }
+  },
+  "TM21": {
+    "move": "Frustration",
+    "locations": {
+      "hoenn": "Pacifidlog Town",
+      "kanto": "Rocket Hideout"
+    }
+  },
+  "TM22": {
+    "move": "SolarBeam",
+    "locations": {
+      "hoenn": "Safari Zone",
+      "kanto": "Pokémon Mansion"
+    }
+  },
+  "TM23": {
+    "move": "Iron Tail",
+    "locations": {
+      "hoenn": "Meteor Falls",
+      "kanto": "Rocket Game Corner"
+    },
+    "price": {
+      "kanto": "3500 Coins"
+    }
+  },
+  "TM24": {
+    "move": "Thunderbolt",
+    "locations": {
+      "hoenn": "Gift from Wattson, Mauville Game Corner",
+      "kanto": "Rocket Game Corner"
+    },
+    "price": {
+      "hoenn": "4000 Coins",
+      "kanto": "4000 Coins"
+    }
+  },
+  "TM25": {
+    "move": "Thunder",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Kanto Power Plant"
+    },
+    "price": {
+      "hoenn": "5500"
+    }
+  },
+  "TM26": {
+    "move": "Earthquake",
+    "locations": {
+      "hoenn": "Seafloor Cavern, Pickup**E** (1% chance, lv 91-100), Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Prize for defeating Giovanni"
+    }
+  },
+  "TM27": {
+    "move": "Return",
+    "locations": {
+      "hoenn": "Fallarbor Town, Pacifidlog Town",
+      "kanto": "Route 12"
+    }
+  },
+  "TM28": {
+    "move": "Dig",
+    "locations": {
+      "hoenn": "Route 114",
+      "kanto": "Cerulean City, Celadon Department Store"
+    },
+    "price": {
+      "kanto": "2000"
+    }
+  },
+  "TM29": {
+    "move": "Psychic",
+    "locations": {
+      "hoenn": "Mauville Game Corner, Victory Road",
+      "kanto": "Saffron City"
+    },
+    "price": {
+      "hoenn": "3500 Coins"
+    }
+  },
+  "TM30": {
+    "move": "Shadow Ball",
+    "locations": {
+      "hoenn": "Mt. Pyre",
+      "kanto": "Rocket Game Corner"
+    },
+    "price": {
+      "kanto": "4500 Coins"
+    }
+  },
+  "TM31": {
+    "move": "Brick Break",
+    "locations": {
+      "hoenn": "Sootopolis City, Trainer Hill**E**",
+      "kanto": "Celadon Department Store, S.S. Anne"
+    },
+    "price": {
+      "kanto": "3000"
+    }
+  },
+  "TM32": {
+    "move": "Double Team",
+    "locations": {
+      "hoenn": "Route 113, Mauville Game Corner",
+      "kanto": "Safari Zone"
+    },
+    "price": {
+      "hoenn": "1500 Coins"
+    }
+  },
+  "TM33": {
+    "move": "Reflect",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Celadon Department Store"
+    },
+    "price": {
+      "hoenn": "3000",
+      "kanto": "3000"
+    }
+  },
+  "TM34": {
+    "move": "Shock Wave",
+    "locations": {
+      "hoenn": "Prize for defeating Wattson",
+      "kanto": "Prize for defeating Lt. Surge"
+    }
+  },
+  "TM35": {
+    "move": "Flamethrower",
+    "locations": {
+      "hoenn": "Mauville Game Corner",
+      "kanto": "Rocket Game Corner"
+    },
+    "price": {
+      "hoenn": "4000 Coins",
+      "kanto": "4000 Coins"
+    }
+  },
+  "TM36": {
+    "move": "Sludge Bomb",
+    "locations": {
+      "hoenn": "Dewford Town, Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Rocket Warehouse"
+    }
+  },
+  "TM37": {
+    "move": "Sandstorm",
+    "locations": {
+      "hoenn": "Route 111",
+      "kanto": "Victory Road"
+    }
+  },
+  "TM38": {
+    "move": "Fire Blast",
+    "locations": {
+      "hoenn": "Lilycove Department Store",
+      "kanto": "Prize for defeating Blaine"
+    },
+    "price": {
+      "hoenn": "5500"
+    }
+  },
+  "TM39": {
+    "move": "Rock Tomb",
+    "locations": {
+      "hoenn": "Prize for defeating Roxanne",
+      "kanto": "Prize for defeating Brock"
+    }
+  },
+  "TM40": {
+    "move": "Aerial Ace",
+    "locations": {
+      "hoenn": "Prize for defeating Winona",
+      "kanto": "Route 9"
+    }
+  },
+  "TM41": {
+    "move": "Torment",
+    "locations": {
+      "hoenn": "Slateport City, Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Silph Co."
+    }
+  },
+  "TM42": {
+    "move": "Facade",
+    "locations": {
+      "hoenn": "Prize for defeating Norman",
+      "kanto": "Memorial Pillar"
+    }
+  },
+  "TM43": {
+    "move": "Secret Power",
+    "locations": {
+      "hoenn": "Route 111, Slateport City",
+      "kanto": "Route 25, Celadon Department Store"
+    },
+    "price": {
+      "kanto": "3000"
+    }
+  },
+  "TM44": {
+    "move": "Rest",
+    "locations": {
+      "hoenn": "Lilycove City, Pickup**E** (1% chance, lv 51-70)",
+      "kanto": "S.S. Anne"
+    }
+  },
+  "TM45": {
+    "move": "Attract",
+    "locations": {
+      "hoenn": "Verdanturf Town, Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Route 24, Celadon Department Store"
+    },
+    "price": {
+      "kanto": "3000"
+    }
+  },
+  "TM46": {
+    "move": "Thief",
+    "locations": {
+      "hoenn": "Slateport City",
+      "kanto": "Mt. Moon"
+    }
+  },
+  "TM47": {
+    "move": "Steel Wing",
+    "locations": {
+      "hoenn": "Granite Cave",
+      "kanto": "Safari Zone"
+    }
+  },
+  "TM48": {
+    "move": "Skill Swap",
+    "locations": {
+      "hoenn": "Mt. Pyre, Trainer Hill**E** (Japan-only e-Reader exclusive)",
+      "kanto": "Route 12"
+    }
+  },
+  "TM49": {
+    "move": "Snatch",
+    "locations": {
+      "hoenn": "S.S. Tidal",
+      "kanto": "Rocket Hideout"
+    }
+  },
+  "TM50": {
+    "move": "Overheat",
+    "locations": {
+      "hoenn": "Prize for defeating Flannery",
+      "kanto": "Victory Road"
+    }
+  },
+  "HM01": {
+    "move": "Cut",
+    "locations": {
+      "hoenn": "Rustboro City",
+      "kanto": "S.S. Anne"
+    },
+    "badge": {
+      "hoenn": "Stone Badge",
+      "kanto": "Cascade Badge"
+    }
+  },
+  "HM02": {
+    "move": "Fly",
+    "locations": {
+      "hoenn": "Route 119",
+      "kanto": "Route 16"
+    },
+    "badge": {
+      "hoenn": "Feather Badge",
+      "kanto": "Thunder Badge"
+    }
+  },
+  "HM03": {
+    "move": "Surf",
+    "locations": {
+      "hoenn": "Petalburg City",
+      "kanto": "Safari Zone"
+    },
+    "badge": {
+      "hoenn": "Balance Badge",
+      "kanto": "Soul Badge"
+    }
+  },
+  "HM04": {
+    "move": "Strength",
+    "locations": {
+      "hoenn": "Rusturf Tunnel",
+      "kanto": "Fuchsia City"
+    },
+    "badge": {
+      "hoenn": "Heat Badge",
+      "kanto": "Rainbow Badge"
+    }
+  },
+  "HM05": {
+    "move": "Flash",
+    "locations": {
+      "hoenn": "Granite Cave",
+      "kanto": "Route 2"
+    },
+    "badge": {
+      "hoenn": "Knuckle Badge",
+      "kanto": "Boulder Badge"
+    }
+  },
+  "HM06": {
+    "move": "Rock Smash",
+    "locations": {
+      "hoenn": "Mauville City",
+      "kanto": "Ember Spa"
+    },
+    "badge": {
+      "hoenn": "Dynamo Badge",
+      "kanto": "Marsh Badge"
+    }
+  },
+  "HM07": {
+    "move": "Waterfall",
+    "locations": {
+      "hoenn": "Cave of Origin**RS**, Sootopolis City**E**",
+      "kanto": "Icefall Cave"
+    },
+    "badge": {
+      "hoenn": "Rain Badge",
+      "kanto": "Volcano Badge"
+    }
+  },
+  "HM08": {
+    "move": "Dive",
+    "locations": {
+      "hoenn": "Mossdeep City",
+      "kanto": null
+    },
+    "badge": {
+      "hoenn": "Mind Badge",
+      "kanto": null
+    }
+  }
+}
