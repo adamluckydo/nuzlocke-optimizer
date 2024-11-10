@@ -773,7 +773,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    other: 'Pokemon must recharge after using'
+    other: 'User must recharge after using'
   },
   'Peck': {
     name: 'Peck',
@@ -797,14 +797,6 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
       highCrit: true,
     },
-  },
-  'Hidden Power': {
-    name: 'Hidden Power',
-    type: 'Psychic',
-    bp: 70,
-    acc: 1,
-    pp: 24,
-    target: 'One Opponent Pokemon',
   },
   'Low Kick': {
     name: 'Low Kick',
@@ -830,7 +822,7 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
       directDamage: true,
     },
-    other: 'After being hit by a physical attack, deals 2X damage to opponent who attacked'
+    other: 'After being hit by a physical attack, deals 2x damage to opponent who attacked'
   },
   'Seismic Toss': {
     name: 'Seismic Toss',
@@ -1402,7 +1394,28 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 5,
     target: 'All',
-    other: 'Resets stat changes of all Pokemon on the field'
+    other: 'Resets stat changes of all Pokemon on the field',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        atk: 0,
+        def: 0,
+        spAtk: 0,
+        spDef: 0,
+        spd: 0
+      }
+    },
+    {
+      chance: 1,
+      statChanges: {
+        atk: 0,
+        def: 0,
+        spAtk: 0,
+        spDef: 0,
+        spd: 0
+      }
+    }]
   },
   'Reflect': {
     name: 'Reflect',
@@ -2146,6 +2159,12 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        spd: -2
+      }
+    }],
   },
   'Faint Attack': {
     name: 'Faint Attack',
@@ -2154,6 +2173,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
+    other: 'Ignores accuracy checks'
   },
   'Sweet Kiss': {
     name: 'Sweet Kiss',
@@ -2162,6 +2182,10 @@ export const MOVES: {[name: string]: Move} = {
     acc: .75,
     pp: 10,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      confuse: true,
+    }],
   },
   'Belly Drum': {
     name: 'Belly Drum',
@@ -2169,7 +2193,17 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 3,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    flags: {
+      sacrifice: .5,
+    },
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        atk: 6
+      }
+    }]
   },
   'Gunk Shot': {
     name: 'Gunk Shot',
@@ -2179,8 +2213,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 8,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Poison'
+      chance: .3,
+      status: 'PSN'
     }],
   },
   'Mud-slap': {
@@ -2192,7 +2226,9 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Lower Acc.'
+      statChanges: {
+        acc: -1
+      }
     }],
   },
   'Octazooka': {
@@ -2203,8 +2239,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 16,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 50,
-      alt: 'Lower Acc.'
+      chance: .5,
+      statChanges: {
+        acc: -1
+      }
     }],
   },
   'Spikes': {
@@ -2213,7 +2251,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 3,
-    target: 'Your sent out Pokemon',
+    target: 'Both Opponent Pokemon',
+    other: 'Lays a layer of spikes on the opponent\'s side of the battlefield. Upon switching in, opponent takes (1/8, 1/6, 1/4) damage depending on how many layers of spikes exist'
   },
   'Zap Cannon': {
     name: 'Zap Cannon',
@@ -2224,7 +2263,7 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Parlyze'
+      status: 'PAR'
     }],
   },
   'Foresight': {
@@ -2234,6 +2273,13 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        eva: 0 // Reset evasiveness
+      }
+    }],
+    other: 'Allows Normal and Fighting type attacks to hit opponent if they are the Ghost type'
   },
   'Destiny Bond': {
     name: 'Destiny Bond',
@@ -2241,7 +2287,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 5,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Causes the opponent to faint if they attack the user and the user faints (before making another move)'
   },
   'Perish Song': {
     name: 'Perish Song',
@@ -2253,6 +2300,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       sound: true,
     },
+    other: 'Causes all Pokemon on the field to faint after 3 more turns'
   },
   'Icy Wind': {
     name: 'Icy Wind',
@@ -2263,7 +2311,9 @@ export const MOVES: {[name: string]: Move} = {
     target: 'Both Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Lower Spd.'
+      statChanges: {
+        spd: -1,
+      }
     }],
   },
   'Detect': {
@@ -2283,9 +2333,6 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    flags: {
-    multihit: [2,5, 5],
-    },
   },
   'Lock-on': {
     name: 'Lock-on',
@@ -2294,14 +2341,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-  },
-  'Hidden Power': {
-    name: 'Hidden Power',
-    type: 'Ground',
-    bp: 70,
-    acc: 1,
-    pp: 24,
-    target: 'One Opponent Pokemon',
+    other: 'Guarantees the user\'s next attack will hit'
   },
   'Sandstorm': {
     name: 'Sandstorm',
@@ -2309,7 +2349,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 1,
-    target: 'Your two Pokemon',
+    target: 'All',
+    other: 'Creates a sandstorm on the battlefield that lasts for 5 turns' // https://bulbapedia.bulbagarden.net/wiki/Sandstorm_(move)
   },
   'Giga Drain': {
     name: 'Giga Drain',
@@ -2319,7 +2360,7 @@ export const MOVES: {[name: string]: Move} = {
     pp: 16,
     target: 'One Opponent Pokemon',
     flags: {
-    drain: [1, 2],
+      drain: .5
     },
   },
   'Endure': {
@@ -2328,7 +2369,7 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 5,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
     priority: 3,
   },
   'Charm': {
@@ -2338,6 +2379,12 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        atk: -2
+      }
+    }]
   },
   'Rollout': {
     name: 'Rollout',
@@ -2349,6 +2396,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Attacks for 5 turns or until missing, doubling damage on each consecutive turn'
   },
   'False Swipe': {
     name: 'False Swipe',
@@ -2360,6 +2408,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'If this move would cause the opponent to faint, leaves the opponent at 1HP'
   },
   'Swagger': {
     name: 'Swagger',
@@ -2370,7 +2419,10 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Confuse + Raise Attk. sharply'
+      confuse: true,
+      statChanges: {
+        atk: 2
+      }
     }],
   },
   'Milk Drink': {
@@ -2379,7 +2431,10 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 10,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    flags: {
+      recover: .5
+    }
   },
   'Wild Charge': {
     name: 'Wild Charge',
@@ -2388,10 +2443,9 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-    secondary: [{
-      chance: 10,
-      alt: '1/3 Recoil'
-    }],
+    flags: {
+      recoil: 1/3,
+    }
   },
   'X-scissors': {
     name: 'X-scissors',
@@ -2400,6 +2454,9 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
+    flags: {
+      highCrit: true,
+    }
   },
   'Steel Wing': {
     name: 'Steel Wing',
@@ -2412,8 +2469,11 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 10,
-      alt: '+1 Def'
+      chance: .1,
+      self: true,
+      statChanges: {
+        def: 1
+      }
     }],
   },
   'Mean Look': {
@@ -2423,6 +2483,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
+    other: 'Prevents opponent from fleeing'
   },
   'Attract': {
     name: 'Attract',
@@ -2431,6 +2492,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 15,
     target: 'One Opponent Pokemon',
+    other: 'Prevents opponent of opposite gender from attacking 50% of the time'
   },
   'Sleep Talk': {
     name: 'Sleep Talk',
@@ -2439,6 +2501,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 16,
     target: 'Your Pokemon',
+    other: 'User uses one of its other moves while sleeping'
   },
   'Heal Bell': {
     name: 'Heal Bell',
@@ -2450,6 +2513,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       sound: true,
     },
+    other: 'Heals the party\'s status conditions'
   },
   'Return': {
     name: 'Return',
@@ -2465,10 +2529,11 @@ export const MOVES: {[name: string]: Move} = {
   'Present': {
     name: 'Present',
     type: 'Normal',
-    bp: 1,
+    bp: 0,
     acc: .9,
     pp: 15,
-    target: 'One Opponent Pokemon',
+    target: 'All',
+    other: '40% chance of dealing 40bp, 30% chance of dealing 80bp, 10% chance of dealing 120bp, and 20% chance of healing 1/4 of the user\'s max HP'
   },
   'Frustration': {
     name: 'Frustration',
@@ -2496,6 +2561,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Set HP of user and opponent to (HP + Opponent HP) / 2'
   },
   'Sacred Fire': {
     name: 'Sacred Fire',
@@ -2505,8 +2571,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 10,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 50,
-      alt: 'Burn'
+      chance: .5,
+      status: 'BRN'
     }],
   },
   'Magnitude': {
@@ -2516,6 +2582,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 30,
     target: 'All',
+    other: 'Deals varying damage. Deals 2x damage to Pokemon using Dig' // https://pokemondb.net/move/magnitude
   },
   'Dynamicpunch': {
     name: 'Dynamicpunch',
@@ -2526,7 +2593,7 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Confuse'
+      confuse: true
     }],
   },
   'Megahorn': {
@@ -2548,8 +2615,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 20,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Parlyze'
+      chance: .3,
+      status: 'PAR'
     }],
   },
   'Baton Pass': {
@@ -2559,6 +2626,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 40,
     target: 'Your two Pokemon',
+    other: 'Switches user out for another Pokemon, passing all stat stage changes, confusion, focused effect, trapped effect, sureHit effect, cursed effect, perishTurn, and substitute (with remaining HP)'
   },
   'Encore': {
     name: 'Encore',
@@ -2567,6 +2635,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
+    other: 'Causes opponent to repeat their last used move for 2-6 turns'
   },
   'Pursuit': {
     name: 'Pursuit',
@@ -2578,6 +2647,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'If target is switching out, has priority +7 and has double bp'
   },
   'Rapid Spin': {
     name: 'Rapid Spin',
@@ -2589,6 +2659,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Removes Bind, Wrap, Clamp, Whirlpool, Fire Spin, Leech Seed, and Spikes'
   },
   'Sweet Scent': {
     name: 'Sweet Scent',
@@ -2597,6 +2668,12 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'Both Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        eva: -1
+      }
+    }],
   },
   'Iron Tail': {
     name: 'Iron Tail',
@@ -2609,8 +2686,10 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      alt: 'Lower Def.'
+      chance: .3,
+      statChanges: {
+        def: -1
+      }
     }],
   },
   'Metal Claw': {
@@ -2624,21 +2703,25 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 10,
-      alt: 'Raise Own Attk.'
+      chance: .1,
+      self: true,
+      statChanges: {
+        atk: 1
+      }
     }],
   },
   'Vital Throw': {
     name: 'Vital Throw',
     type: 'Fighting',
     bp: 70,
-    acc: 1,
+    acc: 0,
     pp: 10,
     target: 'One Opponent Pokemon',
     priority: -1,
     flags: {
       contact: true,
     },
+    other: 'Ignores accuracy checks'
   },
   'Morning Sun': {
     name: 'Morning Sun',
@@ -2646,7 +2729,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 10,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Restores 25% of max HP. In sunlight, restores 50%. In all other weather, restores 1/8.'
   },
   'Synthesis': {
     name: 'Synthesis',
@@ -2654,7 +2738,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 10,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Restores 25% of max HP. In sunlight, restores 50%. In all other weather, restores 1/8.'
   },
   'Moonlight': {
     name: 'Moonlight',
@@ -2662,15 +2747,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 10,
-    target: 'Your two Pokemon',
-  },
-  'Hidden Power': {
-    name: 'Hidden Power',
-    type: 'Normal',
-    bp: 1,
-    acc: 1,
-    pp: 15,
-    target: 'One Opponent Pokemon',
+    target: 'Your Pokemon',
+    other: 'Restores 25% of max HP. In sunlight, restores 50%. In all other weather, restores 1/8.'
   },
   'Cross Chop': {
     name: 'Cross Chop',
@@ -2681,6 +2759,7 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
+      highCrit: true,
     },
   },
   'Twister': {
@@ -2691,9 +2770,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 20,
     target: 'Both Opponent Pokemon',
     secondary: [{
-      chance: 20,
-      alt: 'Double dmg On Flyer Flinch Chance'
+      chance: .2,
+      flinch: true
     }],
+    other: 'Inflicts 2x damage to opponents in Bounce or Fly'
   },
   'Rain Dance': {
     name: 'Rain Dance',
@@ -2701,7 +2781,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 1,
-    target: 'Your two Pokemon',
+    target: 'All',
+    other: 'Causes a rain shower that lasts for 5 turns' // https://pokemondb.net/move/rain-dance
   },
   'Sunny Day': {
     name: 'Sunny Day',
@@ -2709,7 +2790,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 1,
-    target: 'Your two Pokemon',
+    target: 'All',
+    other: 'Causes bright sunlight that lasts for 5 turns' // https://pokemondb.net/move/sunny-day
   },
   'Crunch': {
     name: 'Crunch',
@@ -2722,8 +2804,10 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 20,
-      alt: 'Lower Spec. Def.'
+      chance: .2,
+      statChanges: {
+        spDef: -1
+      }
     }],
   },
   'Mirror Coat': {
@@ -2737,6 +2821,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       directDamage: true,
     },
+    other: 'After being hit by a special attack, deals 2x damage to opponent who attacked'
   },
   'Psych Up': {
     name: 'Psych Up',
@@ -2745,6 +2830,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Copies the opponent\'s stat stage changes'
   },
   'Extremespeed': {
     name: 'Extremespeed',
@@ -2763,8 +2849,15 @@ export const MOVES: {[name: string]: Move} = {
     pp: 8,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 10,
-      alt: 'Omniboost'
+      chance: .1,
+      self: true,
+      statChanges: {
+        atk: 1,
+        def: 1,
+        spAtk: 1,
+        spDef: 1,
+        spd: 1
+      }
     }],
   },
   'Shadow Ball': {
@@ -2775,17 +2868,11 @@ export const MOVES: {[name: string]: Move} = {
     pp: 24,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 20,
-      alt: 'Lower Def.'
+      chance: .2,
+      statChanges: {
+        def: -1
+      }
     }],
-  },
-  'Hidden Power': {
-    name: 'Hidden Power',
-    type: 'Fighting',
-    bp: 70,
-    acc: 1,
-    pp: 24,
-    target: 'One Opponent Pokemon',
   },
   'Rock Smash': {
     name: 'Rock Smash',
@@ -2798,8 +2885,10 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 50,
-      alt: 'Lower Def.'
+      chance: .5,
+      statChanges: {
+        def: -1
+      }
     }],
   },
   'Whirlpool': {
@@ -2811,8 +2900,11 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: '2-5 Hits + Lower Evas.'
+      statChanges: {
+        eva: -1,
+      },
     }],
+    other: 'Deal 1/16 of the opponent\'s health at the end of the turn for 2-5 turns'
   },
   'Beat Up': {
     name: 'Beat Up',
@@ -2821,6 +2913,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Damage is calculated using each non-statused party member' // https://pokemondb.net/move/beat-up
   },
   'Fake Out': {
     name: 'Fake Out',
@@ -2829,7 +2922,11 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
-    priority: 1
+    priority: 1,
+    secondary: [{
+      chance: 1,
+      flinch: true,
+    }]
   },
   'Uproar': {
     name: 'Uproar',
@@ -2841,10 +2938,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       sound: true,
     },
-    secondary: [{
-      chance: 1,
-      alt: 'Uproar'
-    }],
+    other: 'Attacks consecutively for 3 turns. No Pokemon can sleep during an Uproar'
   },
   'Stockpile': {
     name: 'Stockpile',
@@ -2852,7 +2946,15 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 16,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        def: 1,
+        spDef: 1,
+      }
+    }]
   },
   'Spit Up': {
     name: 'Spit Up',
@@ -2861,6 +2963,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 16,
     target: 'One Opponent Pokemon',
+    other: 'Upon use, damage = (bp * stockpileCount). Also removes def and spDef boosts given from Stockpiling.'
   },
   'Swallow': {
     name: 'Swallow',
@@ -2868,7 +2971,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 10,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Restores 25%, 50%, or 100% of the user\'s HP based on their stockpileCount'
   },
   'Heat Wave': {
     name: 'Heat Wave',
@@ -2878,8 +2982,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 16,
     target: 'Both Opponent Pokemon',
     secondary: [{
-      chance: 20,
-      alt: 'Burn'
+      chance: .2,
+      status: 'BRN'
     }],
   },
   'Hail': {
@@ -2889,6 +2993,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 1,
     target: 'Your two Pokemon',
+    other: 'Creates a hailstorm that lasts for 5 turns' // https://pokemondb.net/move/hail
   },
   'Torment': {
     name: 'Torment',
@@ -2905,6 +3010,13 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      confuse: true,
+      statChanges: {
+        spAtk: 1
+      }
+    }]
   },
   'Will-o-wisp': {
     name: 'Will-o-wisp',
@@ -2913,14 +3025,29 @@ export const MOVES: {[name: string]: Move} = {
     acc: .85,
     pp: 15,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      status: 'BRN'
+    }]
   },
   'Memento': {
     name: 'Memento',
     type: 'Dark',
     bp: 0,
-    acc: 1,
+    acc: 0,
     pp: 1,
     target: 'One Opponent Pokemon',
+    flags: {
+      sacrifice: 1
+    },
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        atk: -2,
+        spAtk: -2,
+      }
+    }],
+    other: 'Always hits'
   },
   'Facade': {
     name: 'Facade',
@@ -2932,6 +3059,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'If the user is poisoned, paralyzed, or burned, deals 2x damage'
   },
   'Focus Punch': {
     name: 'Focus Punch',
@@ -2944,6 +3072,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'If the user is damaged by a move before this attack hits, they will lose their focus and flinch'
   },
   'Smellingsalt': {
     name: 'Smellingsalt',
@@ -2952,6 +3081,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Deals 2x damage to paralyzed opponents, but heals their paralysis'
   },
   'Follow Me': {
     name: 'Follow Me',
@@ -2961,6 +3091,7 @@ export const MOVES: {[name: string]: Move} = {
     pp: 20,
     target: 'Your Pokemon',
     priority: 3,
+    other: 'Directs all attacks from opponents in a double battle to this Pokemon'
   },
   'Nature Power': {
     name: 'Nature Power',
@@ -2969,6 +3100,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: .95,
     pp: 20,
     target: 'Your Pokemon',
+    other: 'Turns into a different move based on the current terrain' // https://pokemondb.net/move/nature-power
   },
   'Charge': {
     name: 'Charge',
@@ -2976,7 +3108,15 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 20,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        spDef: 1
+      }
+    }],
+    other: 'User\'s next move, if Electric, will deal 2x damage'
   },
   'Taunt': {
     name: 'Taunt',
@@ -2985,6 +3125,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
+    other: 'Causes the opponent to not be able to use Status-category moves for 3 turns'
   },
   'Helping Hand': {
     name: 'Helping Hand',
@@ -2992,8 +3133,9 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 20,
-    target: 'Your two Pokemon',
-    priority: 5
+    target: 'Your Pokemon',
+    priority: 5,
+    other: 'Doubles the damage of ally Pokemon\'s move in a double battle'
   },
   'Role Play': {
     name: 'Role Play',
@@ -3002,6 +3144,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Copies the opponent\'s ability'
   },
   'Wish': {
     name: 'Wish',
@@ -3009,7 +3152,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 2,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Heals the Pokemon in the slot this move was used by 50% of its maximum health after one turn' // Battlefield
   },
   'Assist': {
     name: 'Assist',
@@ -3018,6 +3162,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 32,
     target: 'Your Pokemon',
+    other: 'Uses a random move known by any of the party\'s Pokemon' // https://pokemondb.net/move/assist
   },
   'Ingrain': {
     name: 'Ingrain',
@@ -3025,7 +3170,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 1,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'User plants roots to restore 1/16 of max HP at the end of each turn, but can\'t switch out'
   },
   'Superpower': {
     name: 'Superpower',
@@ -3036,6 +3182,7 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
+      recoil: 1/3,
     },
   },
   'Magic Coat': {
@@ -3046,6 +3193,7 @@ export const MOVES: {[name: string]: Move} = {
     pp: 15,
     target: 'Your Pokemon',
     priority: 4,
+    other: 'Reflects any status condition causing move back to the opponent'
   },
   'Recycle': {
     name: 'Recycle',
@@ -3053,7 +3201,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 16,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'User\'s hold item is restored'
   },
   'Revenge': {
     name: 'Revenge',
@@ -3066,6 +3215,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Deals double damage if the target damaged the user during the current turn'
   },
   'Brick Break': {
     name: 'Brick Break',
@@ -3077,6 +3227,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Breaks barriers such as Reflect and Light Screen before attacking'
   },
   'Yawn': {
     name: 'Yawn',
@@ -3085,6 +3236,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: .7,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Makes target drowsy (so they will fall asleep at the end of the next turn)'
   },
   'Knock Off': {
     name: 'Knock Off',
@@ -3096,10 +3248,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
-    secondary: [{
-      chance: 1,
-      alt: 'Knock Off'
-    }],
+    other: 'If the opponent has a held item, deals 2x damage and removes the item for the rest of the battle. If the item activates on attack, its effect is proced before it is removed'
   },
   'Endeavor': {
     name: 'Endeavor',
@@ -3112,6 +3261,7 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
       directDamage: true,
     },
+    other: 'Reduces the opponent\'s health to equal the user\'s. Fails if user\'s health is higher'
   },
   'Draco Meteor': {
     name: 'Draco Meteor',
@@ -3120,6 +3270,9 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
+    flags: {
+      recoil: 1/3
+    }
   },
   'Skill Swap': {
     name: 'Skill Swap',
@@ -3128,6 +3281,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 10,
     target: 'One Opponent Pokemon',
+    other: 'Swaps the user\'s ability with the target\'s'
   },
   'Imprison': {
     name: 'Imprison',
@@ -3135,7 +3289,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 10,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Causes opponents to not be able to use any move the user knows'
   },
   'Refresh': {
     name: 'Refresh',
@@ -3144,6 +3299,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'Your two Pokemon',
+    other: 'Cures paralysis, poison, or burn'
   },
   'Grudge': {
     name: 'Grudge',
@@ -3152,6 +3308,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'Your two Pokemon',
+    other: 'If user faints before using another move, causes the opponent\'s move to lose all of its PP'
   },
   'Snatch': {
     name: 'Snatch',
@@ -3161,6 +3318,7 @@ export const MOVES: {[name: string]: Move} = {
     pp: 3,
     target: 'Your Pokemon',
     priority: 4,
+    other: 'Steals the effects of the next status move used by the opponent(s) that turn'
   },
   'Secret Power': {
     name: 'Secret Power',
@@ -3169,10 +3327,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 20,
     target: 'One Opponent Pokemon',
-    secondary: [{
-      chance: 30,
-      alt: 'Secret Power'
-    }],
+    other: 'Has a 30% chance of causing a secondary effect, based on the terrain'
   },
   'Dive': {
     name: 'Dive',
@@ -3184,6 +3339,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'The user dives underwater for one turn, then attacks the next turn'
   },
   'Force Palm': {
     name: 'Force Palm',
@@ -3193,8 +3349,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 16,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Parlyze'
+      chance: .3,
+      status: 'PAR'
     }],
   },
   'Camouflage': {
@@ -3203,7 +3359,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 20,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    other: 'Causes the user to change its type based on the current terrain.' // https://pokemondb.net/move/camouflage
   },
   'Tail Glow': {
     name: 'Tail Glow',
@@ -3211,7 +3368,14 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 3,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        spAtk: 2
+      }
+    }]
   },
   'Luster Purge': {
     name: 'Luster Purge',
@@ -3221,8 +3385,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 10,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 50,
-      alt: 'Lower Spec. Def.'
+      chance: .5,
+      statChanges: {
+        spDef: -1
+      }
     }],
   },
   'Mist Ball': {
@@ -3233,8 +3399,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 10,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 50,
-      alt: 'Lower Spec. Attk.'
+      chance: .5,
+      statChanges: {
+        spAtk: -1
+      }
     }],
   },
   'Featherdance': {
@@ -3244,6 +3412,12 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        atk: -2
+      }
+    }],
   },
   'Teeter Dance': {
     name: 'Teeter Dance',
@@ -3251,7 +3425,11 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 32,
-    target: 'Both Opponent Pokemon',
+    target: 'All',
+    secondary: [{
+      chance: 1,
+      confuse: true
+    }]
   },
   'Blaze Kick': {
     name: 'Blaze Kick',
@@ -3262,10 +3440,11 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
+      highCrit: true
     },
     secondary: [{
-      chance: 30,
-      alt: 'Burn chance increased crit'
+      chance: .3,
+      status: 'BRN'
     }],
   },
   'Mud Sport': {
@@ -3275,6 +3454,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 15,
     target: 'Your two Pokemon',
+    other: 'Reduces the power of Electric type moves by 50%' // Battlefield
   },
   'Ice Ball': {
     name: 'Ice Ball',
@@ -3286,6 +3466,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Attacks for 5 turns or until missing, doubling damage on each consecutive turn'
   },
   'Needle Arm': {
     name: 'Needle Arm',
@@ -3298,9 +3479,10 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      alt: 'Flinch 2x on minimized'
+      chance: .3,
+      flinch: true
     }],
+    other: '2x damage and chance to flinch on minimized targets'
   },
   'Slack Off': {
     name: 'Slack Off',
@@ -3309,6 +3491,9 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 10,
     target: 'Your two Pokemon',
+    flags: {
+      recover: .5,
+    }
   },
   'Hyper Voice': {
     name: 'Hyper Voice',
@@ -3321,8 +3506,10 @@ export const MOVES: {[name: string]: Move} = {
       sound: true,
     },
     secondary: [{
-      chance: 20,
-      alt: 'Lower Def.'
+      chance: .2,
+      statChanges: {
+        def: -1,
+      }
     }],
   },
   'Poison Fang': {
@@ -3336,8 +3523,8 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 50,
-      alt: 'Badly Poison Chance'
+      chance: .5,
+      status: 'TOX'
     }],
   },
   'Crush Claw': {
@@ -3351,8 +3538,10 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 50,
-      alt: 'Lower Def.'
+      chance: .5,
+      statChanges: {
+        def: -1,
+      }
     }],
   },
   'Blast Burn': {
@@ -3362,6 +3551,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
+    other: 'User must recharge after using'
   },
   'Hydro Cannon': {
     name: 'Hydro Cannon',
@@ -3370,6 +3560,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
+    other: 'User must recharge after using'
   },
   'Meteor Mash': {
     name: 'Meteor Mash',
@@ -3382,8 +3573,11 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      alt: 'Raise Own Attk.'
+      chance: .3,
+      self: true,
+      statChanges: {
+        atk: 1,
+      }
     }],
   },
   'Shadow Sneak': {
@@ -3393,14 +3587,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
-  },
-  'Weather Ball': {
-    name: 'Weather Ball',
-    type: 'Normal',
-    bp: 50,
-    acc: 1,
-    pp: 16,
-    target: 'One Opponent Pokemon',
+    priority: 1
   },
   'Aromatherapy': {
     name: 'Aromatherapy',
@@ -3409,6 +3596,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 2,
     target: 'Your two Pokemon',
+    other: 'Cures all status problems in the party' // Same as Heal Bell
   },
   'Fake Tears': {
     name: 'Fake Tears',
@@ -3417,6 +3605,12 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        spDef: -2
+      }
+    }]
   },
   'Air Slash': {
     name: 'Air Slash',
@@ -3426,8 +3620,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 25,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Target flinches'
+      chance: .3,
+      flinch: true
     }],
   },
   'Overheat': {
@@ -3440,6 +3634,13 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        spAtk: -2
+      }
+    }]
   },
   'Odor Sleuth': {
     name: 'Odor Sleuth',
@@ -3448,6 +3649,13 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 3,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        eva: 0 // Reset evasiveness
+      }
+    }],
+    other: 'Allows Normal and Fighting type attacks to hit opponent if they are the Ghost type'
   },
   'Rock Tomb': {
     name: 'Rock Tomb',
@@ -3458,7 +3666,9 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Lower Spd.'
+      statChanges: {
+        spd: -1
+      }
     }],
   },
   'Silver Wind': {
@@ -3469,8 +3679,15 @@ export const MOVES: {[name: string]: Move} = {
     pp: 5,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 10,
-      alt: 'Omniboost'
+      chance: .1,
+      self: true,
+      statChanges: {
+        atk: 1,
+        def: 1,
+        spAtk: 1,
+        spDef: 1,
+        spd: 1
+      }
     }],
   },
   'Flash Cannon': {
@@ -3481,8 +3698,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 16,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Lower Def.'
+      chance: .3,
+      statChanges: {
+        def: -1,
+      }
     }],
   },
   'Grasswhistle': {
@@ -3492,6 +3711,10 @@ export const MOVES: {[name: string]: Move} = {
     acc: .7,
     pp: 24,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      status: 'SLP'
+    }]
   },
   'Tickle': {
     name: 'Tickle',
@@ -3500,6 +3723,13 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 6,
     target: 'One Opponent Pokemon',
+    secondary: [{
+      chance: 1,
+      statChanges: {
+        atk: -1,
+        def: -1
+      }
+    }]
   },
   'Cosmic Power': {
     name: 'Cosmic Power',
@@ -3508,6 +3738,14 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 6,
     target: 'Your two Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        def: 1,
+        spDef: 1
+      }
+    }]
   },
   'Water Spout': {
     name: 'Water Spout',
@@ -3516,6 +3754,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'Both Opponent Pokemon',
+    other: 'Inflicts damage according to the user\'s HP. (150 * Current HP / Max HP)'
   },
   'Signal Beam': {
     name: 'Signal Beam',
@@ -3525,8 +3764,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 24,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 10,
-      alt: 'Confuse'
+      chance: .1,
+      confuse: true
     }],
   },
   'Shadow Punch': {
@@ -3539,6 +3778,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Ignores accuracy checks'
   },
   'Extrasensory': {
     name: 'Extrasensory',
@@ -3548,9 +3788,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 30,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Flinch 2x on minimized'
+      chance: .3,
+      flinch: true
     }],
+    other: '2x damage and chance to flinch on minimized targets'
   },
   'Sky Uppercut': {
     name: 'Sky Uppercut',
@@ -3562,6 +3803,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Can hit Pokemon during Bounce and Fly'
   },
   'Sand Tomb': {
     name: 'Sand Tomb',
@@ -3570,9 +3812,14 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 24,
     target: 'One Opponent Pokemon',
+    flags: {
+      multihit: true,
+    },
     secondary: [{
       chance: 1,
-      alt: '2-5 Hits + Lower Evas.'
+      statChanges: {
+        eva: -1
+      }
     }],
   },
   'Sheer Cold': {
@@ -3594,8 +3841,10 @@ export const MOVES: {[name: string]: Move} = {
     pp: 10,
     target: 'Both Opponent Pokemon',
     secondary: [{
-      chance: 30,
-      alt: 'Lower Acc.'
+      chance: .3,
+      statChanges: {
+        acc: -1
+      }
     }],
   },
   'Bullet Seed': {
@@ -3606,7 +3855,7 @@ export const MOVES: {[name: string]: Move} = {
     pp: 30,
     target: 'One Opponent Pokemon',
     flags: {
-    multihit: [2,5, 5],
+      multihit: true,
     },
   },
   'Aerial Ace': {
@@ -3619,6 +3868,7 @@ export const MOVES: {[name: string]: Move} = {
     flags: {
       contact: true,
     },
+    other: 'Bypasses accuracy checks'
   },
   'Ice Shard': {
     name: 'Ice Shard',
@@ -3627,6 +3877,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 30,
     target: 'One Opponent Pokemon',
+    priority: 1,
   },
   'Iron Defense': {
     name: 'Iron Defense',
@@ -3634,7 +3885,14 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 3,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        def: 2
+      }
+    }]
   },
   'Block': {
     name: 'Block',
@@ -3643,6 +3901,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 5,
     target: 'One Opponent Pokemon',
+    other: 'Prevents opponent from fleeing'
   },
   'Howl': {
     name: 'Howl',
@@ -3650,7 +3909,14 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 0,
     pp: 5,
-    target: 'Your two Pokemon',
+    target: 'Your Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        atk: 2
+      }
+    }]
   },
   'Dragon Claw': {
     name: 'Dragon Claw',
@@ -3661,6 +3927,7 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
+      highCrit: true,
     },
   },
   'Frenzy Plant': {
@@ -3670,6 +3937,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
+    other: 'User must recharge after using'
   },
   'Bulk Up': {
     name: 'Bulk Up',
@@ -3678,6 +3946,14 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        atk: 1,
+        def: 1
+      }
+    }]
   },
   'Bounce': {
     name: 'Bounce',
@@ -3690,8 +3966,7 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      alt: 'Fly/Bounce/Dig'
+      chance: .3,
     }],
   },
   'Mud Shot': {
@@ -3703,7 +3978,9 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     secondary: [{
       chance: 1,
-      alt: 'Lower Spd.'
+      statChanges: {
+        spd: -1
+      }
     }],
   },
   'Poison Tail': {
@@ -3717,17 +3994,9 @@ export const MOVES: {[name: string]: Move} = {
       contact: true,
     },
     secondary: [{
-      chance: 30,
-      alt: 'Badly Poison Chance'
+      chance: .3,
+      status: 'TOX'
     }],
-  },
-  'Hidden Power': {
-    name: 'Hidden Power',
-    type: 'Bug',
-    bp: 70,
-    acc: 1,
-    pp: 24,
-    target: 'One Opponent Pokemon',
   },
   'Volt Tackle': {
     name: 'Volt Tackle',
@@ -3738,11 +4007,11 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
-    recoil: [1, 3],
+      recoil: 1/3
     },
     secondary: [{
-      chance: 30,
-      alt: '1/3 Recoil'
+      chance: .1,
+      status: 'PAR'
     }],
   },
   'Magical Leaf': {
@@ -3752,6 +4021,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
+    other: 'Bypasses accuracy checks'
   },
   'Water Sport': {
     name: 'Water Sport',
@@ -3759,7 +4029,8 @@ export const MOVES: {[name: string]: Move} = {
     bp: 0,
     acc: 1,
     pp: 15,
-    target: 'Your two Pokemon',
+    target: 'All',
+    other: 'Reduces the power of Electric type moves by 50%' // Battlefield
   },
   'Calm Mind': {
     name: 'Calm Mind',
@@ -3768,6 +4039,14 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        spAtk: 1,
+        spDef: 1
+      }
+    }],
   },
   'Leaf Blade': {
     name: 'Leaf Blade',
@@ -3778,6 +4057,7 @@ export const MOVES: {[name: string]: Move} = {
     target: 'One Opponent Pokemon',
     flags: {
       contact: true,
+      highCrit: true,
     },
   },
   'Dragon Dance': {
@@ -3787,6 +4067,14 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 3,
     target: 'Your two Pokemon',
+    secondary: [{
+      chance: 1,
+      self: true,
+      statChanges: {
+        atk: 1,
+        spAtk: 1
+      }
+    }],
   },
   'Rock Blast': {
     name: 'Rock Blast',
@@ -3796,7 +4084,7 @@ export const MOVES: {[name: string]: Move} = {
     pp: 10,
     target: 'One Opponent Pokemon',
     flags: {
-    multihit: [2,5, 5],
+      multihit: true
     },
   },
   'Shock Wave': {
@@ -3806,6 +4094,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: 0,
     pp: 20,
     target: 'One Opponent Pokemon',
+    other: 'Bypasses accuracy checks'
   },
   'Water Pulse': {
     name: 'Water Pulse',
@@ -3815,8 +4104,8 @@ export const MOVES: {[name: string]: Move} = {
     pp: 20,
     target: 'One Opponent Pokemon',
     secondary: [{
-      chance: 20,
-      alt: 'Confuse'
+      chance: .2,
+      confuse: true
     }],
   },
   'Doom Desire': {
@@ -3826,6 +4115,7 @@ export const MOVES: {[name: string]: Move} = {
     acc: .85,
     pp: 5,
     target: 'One Opponent Pokemon',
+    other: 'Causes the opponent to be hit two turns after the move is used' // Battlefield
   },
   'Psycho Boost': {
     name: 'Psycho Boost',
@@ -3834,9 +4124,8 @@ export const MOVES: {[name: string]: Move} = {
     acc: 1,
     pp: 8,
     target: 'One Opponent Pokemon',
-    secondary: [{
-      chance: 1,
-      alt: 'take 1/4 damage'
-    }],
+    flags: {
+      recoil: 1/4
+    }
   },
 };

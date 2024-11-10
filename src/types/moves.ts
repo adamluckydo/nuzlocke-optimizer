@@ -16,7 +16,7 @@ export interface Move {
     recover?: number; // Fraction of own max HP to recover
     sacrifice?: number; // Fraction of own max HP to sacrifice
     twoHit?: boolean; // Hits 2x
-    multihit?: boolean; // Hits 2-5x; 25% chance of each
+    multihit?: boolean; // Hits 2-5x; 3/8 2 hits, 3/8 3 hits, 1/8 4 hits, 1/8 5 hits
     contact?: boolean; // Attacking Pokemon touches opponent
     sound?: boolean; // Sound-based move
     directDamage?: boolean; // No damage calculation
